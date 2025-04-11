@@ -8,7 +8,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"), // Maps `@/` to `src/`
-      "@components": path.resolve(__dirname, "./src/components"), // Optional extra aliases
+      "@components": path.resolve(__dirname, "./src/components"), // Maps `@components/` to `src/components/`
     },
   },
   css: {
@@ -19,7 +19,6 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use "@/styles/variables" as *;
-          @use "@/styles/mixins" as *;
         `, // Globally injects SCSS variables/mixins
       },
     },

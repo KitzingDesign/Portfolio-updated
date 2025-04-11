@@ -1,0 +1,163 @@
+@use "sass:map";
+@use "variables" as *;
+@use "mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; // Base font size for rem units
+  scroll-behavior: smooth;
+}
+
+body {
+  @include typography(base);
+  color: var(--color-text);
+  background-color: var(--color-light);
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: map.get($spacers, 3);
+  font-weight: map.get($font-weights, bold);
+  line-height: 1.2;
+}
+
+p {
+  font-size: map.get($font-sizes, base);
+}
+
+h1 {
+  font-size: map.get($font-sizes, xxl);
+}
+h2 {
+  font-size: map.get($font-sizes, xl);
+}
+h3 {
+  font-size: map.get($font-sizes, lg);
+}
+h4 {
+  font-size: map.get($font-sizes, md);
+}
+h5 {
+  font-size: map.get($font-sizes, base);
+}
+h6 {
+  font-size: map.get($font-sizes, sm);
+}
+
+// Links
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken(map.get($colors, primary), 10%);
+    text-decoration: underline;
+  }
+}
+
+// Buttons
+button,
+.btn {
+  display: inline-block;
+  font-weight: map.get($font-weights, medium);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: map.get($spacers, 2) map.get($spacers, 3);
+  line-height: 1.5;
+  @include typography(base);
+  border-radius: map.get($border-radius, base);
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(map.get($colors, primary), 0.25);
+  }
+}
+
+.btn-primary {
+  @include button-variant(map.get($colors, primary));
+}
+
+.btn-secondary {
+  @include button-variant(map.get($colors, secondary));
+}
+
+// Forms
+input,
+textarea,
+select {
+  display: block;
+  width: 100%;
+  padding: map.get($spacers, 2);
+  @include typography(sm);
+  color: var(--color-text);
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid map.get($colors, gray);
+  border-radius: map.get($border-radius, base);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus {
+    border-color: map.get($colors, primary);
+    outline: 0;
+    box-shadow: map.get($box-shadow, sm);
+  }
+}
+
+// Utility classes
+.container {
+  width: 100%;
+  padding-right: map.get($spacers, 3);
+  padding-left: map.get($spacers, 3);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 540px;
+  }
+  @include media-breakpoint-up(md) {
+    max-width: 720px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: 960px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: 1140px;
+  }
+  @include media-breakpoint-up(xxl) {
+    max-width: 1320px;
+  }
+}
+
+// Responsive typography
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 20px;
+  }
+}

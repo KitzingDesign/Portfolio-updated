@@ -1,23 +1,140 @@
-@use "reset";
+@use "sass:color";
+@use "sass:map";
 @use "variables" as *;
-@use "mixins" as *;
-@use "typography";
-@use "animations";
+@use "mixins";
+@use "base";
 
 :root {
   // CSS Custom Properties for runtime theming
-  --color-primary: #{map-get($colors, primary)};
-  --color-secondary: #{map-get($colors, secondary)};
+  --color-primary: #{map.get($colors, primary)};
+  --color-secondary: #{map.get($colors, secondary)};
+  --color-tertiary: #{map.get($colors, tertiary)};
+  --color-light: #{map.get($colors, light)};
+  --color-dark: #{map.get($colors, dark)};
+  --color-text: #{map.get($colors, text)};
+  --color-gray: #{map.get($colors, gray)};
+  --color-success: #{map.get($colors, success)};
+  --color-danger: #{map.get($colors, danger)};
+  --color-warning: #{map.get($colors, warning)};
+  --color-info: #{map.get($colors, info)};
+
+  // Font sizes
+  @each $size, $value in $font-sizes {
+    --font-size-#{$size}: #{$value};
+  }
+
+  @each $weight, $value in $font-weights {
+    --font-weight-#{$weight}: #{$value};
+  }
+
+  // Spacing
+  @each $space, $value in $spacers {
+    --spacer-#{$space}: #{$value};
+  }
+
+  // Border radius
+  @each $name, $value in $border-radius {
+    --border-radius-#{$name}: #{$value};
+  }
 }
 
 body {
-  background-color: $light;
-  transition: background-color 0.3s ease;
+  background-color: var(--color-light);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-// Dark mode (optional)
+// Dark mode
 [data-theme="dark"] {
-  --color-primary: #{darken(map-get($colors, primary), 10%)};
-  background-color: $dark;
-  color: $light;
+  --color-primary: #{color.adjust(map.get($colors, primary), $lightness: -10%)};
+  --color-secondary: #{color.adjust(
+      map.get($colors, secondary),
+      $lightness: -10%
+    )};
+  --color-light: #{map.get($colors, dark)};
+  --color-dark: #{map.get($colors, light)};
+  --color-text: #{map.get($colors, light)};
+
+  background-color: var(--color-dark);
+  color: var(--color-light);
+
+  a {
+    color: lighten(map.get($colors, primary), 15%);
+
+    &:hover {
+      color: lighten(map.get($colors, primary), 25%);
+    }
+  }
+}
+
+// Utility classes
+@each $size, $value in $font-sizes {
+  .text-#{$size} {
+    font-size: var(--font-size-#{$size});
+  }
+}
+
+@each $weight, $value in $font-weights {
+  .fw-#{$weight} {
+    font-weight: var(--font-weight-#{$weight});
+  }
+}
+
+@each $space, $value in $spacers {
+  .m-#{$space} {
+    margin: var(--spacer-#{$space});
+  }
+  .mt-#{$space},
+  .my-#{$space} {
+    margin-top: var(--spacer-#{$space});
+  }
+  .mb-#{$space},
+  .my-#{$space} {
+    margin-bottom: var(--spacer-#{$space});
+  }
+  .ml-#{$space},
+  .mx-#{$space} {
+    margin-left: var(--spacer-#{$space});
+  }
+  .mr-#{$space},
+  .mx-#{$space} {
+    margin-right: var(--spacer-#{$space});
+  }
+  .p-#{$space} {
+    padding: var(--spacer-#{$space});
+  }
+  .pt-#{$space},
+  .py-#{$space} {
+    padding-top: var(--spacer-#{$space});
+  }
+  .pb-#{$space},
+  .py-#{$space} {
+    padding-bottom: var(--spacer-#{$space});
+  }
+  .pl-#{$space},
+  .px-#{$space} {
+    padding-left: var(--spacer-#{$space});
+  }
+  .pr-#{$space},
+  .px-#{$space} {
+    padding-right: var(--spacer-#{$space});
+  }
+}
+
+// Responsive utilities
+@each $breakpoint, $value in $breakpoints {
+  @include mixins.media-breakpoint-up($breakpoint) {
+    @each $size, $font-size in $font-sizes {
+      .text-#{$breakpoint}-#{$size} {
+        font-size: var(--font-size-#{$size});
+      }
+    }
+
+    @each $space, $spacer in $spacers {
+      .m-#{$breakpoint}-#{$space} {
+        margin: var(--spacer-#{$space});
+      }
+      // Continue for other margin and padding variations...
+    }
+  }
 }

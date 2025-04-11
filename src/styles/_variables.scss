@@ -1,50 +1,83 @@
-// COLORS
+/* Base sizing (1rem = 10px) */
+html {
+  font-size: 62.5%;
+}
+
+// Colors
 $colors: (
-  primary: #3a86ff,
-  secondary: #8338ec,
-  accent: #ff006e,
-  dark: #1a1a2e,
+  primary: #4361ee,
+  secondary: #3f37c9,
+  tertiary: #4895ef,
   light: #f8f9fa,
-  success: #06d6a0,
-  warning: #ffbe0b,
-  error: #ef476f,
+  dark: #212529,
+  text: #333333,
+  gray: #6c757d,
+  success: #4bb543,
+  danger: #dc3545,
+  warning: #ffc107,
+  info: #17a2b8,
 );
 
-// TYPOGRAPHY
-$font-sizes: (
-  base: 1rem,
-  sm: 0.875rem,
-  md: 1.125rem,
-  lg: 1.25rem,
-  xl: 1.5rem,
-  xxl: 2rem,
-);
-
-// SPACING
+/* Spacing */
 $spacing: (
-  xs: 0.25rem,
-  sm: 0.5rem,
-  md: 1rem,
-  lg: 1.5rem,
-  xl: 2rem,
-  xxl: 3rem,
+  xs: 0.4rem,
+  sm: 0.8rem,
+  md: 1.6rem,
+  lg: 2.4rem,
+  xl: 3.2rem,
 );
 
-// BREAKPOINTS
+/* Typography */
+$font-sizes: (
+  xs: 1.2rem,
+  sm: 1.4rem,
+  base: 1.6rem,
+  md: 1.8rem,
+  lg: 2rem,
+  xl: 2.4rem,
+  xxl: 3.2rem,
+);
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+);
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+);
+
+// Breakpoints
 $breakpoints: (
+  xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
   xl: 1200px,
+  xxl: 1400px,
 );
 
-// SHADOWS
-$shadows: (
-  sm: 0 1px 3px rgba(0, 0, 0, 0.12),
-  md: 0 4px 6px rgba(0, 0, 0, 0.1),
-  lg: 0 10px 15px rgba(0, 0, 0, 0.1),
+// Border
+$border-radius: (
+  sm: 0.125rem,
+  base: 0.25rem,
+  lg: 0.5rem,
+  pill: 50rem,
+  circle: 50%,
 );
 
-// Create direct variable access
-$light: map-get($colors, light);
-$dark: map-get($colors, dark);
+// Box shadow
+$box-shadow: (
+  sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075),
+  base: 0 0.5rem 1rem rgba(0, 0, 0, 0.15),
+  lg: 0 1rem 3rem rgba(0, 0, 0, 0.175),
+);

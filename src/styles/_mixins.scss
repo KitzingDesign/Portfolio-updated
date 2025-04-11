@@ -1,26 +1,41 @@
-// MEDIA QUERIES
-@mixin respond-to($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: map-get($breakpoints, $breakpoint)) {
+@use "sass:map";
+@use "variables" as *;
+
+// Media query mixin
+@mixin media-breakpoint-up($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    $min: map.get($breakpoints, $breakpoint);
+    @media (min-width: $min) {
       @content;
     }
   } @else {
-    @warn "Unknown breakpoint: #{$breakpoint}";
+    @error "Unknown breakpoint `#{$breakpoint}`.";
   }
 }
 
-// FLEX CENTERING
-@mixin flex-center($direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
+@mixin typography($size, $weight: regular, $line-height: 1.5) {
+  font-size: var(--font-size-#{$size});
+  font-weight: var(--font-weight-#{$weight});
+  line-height: $line-height;
 }
 
-// TRUNCATE TEXT
-@mixin truncate($max-width: 100%) {
-  max-width: $max-width;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+// Spacing mixin
+@mixin spacing($property, $direction: null, $size) {
+  @if $direction {
+    #{$property}-#{$direction}: map.get($spacers, $size);
+  } @else {
+    #{$property}: map.get($spacers, $size);
+  }
+}
+
+// Button mixin
+@mixin button-variant($background, $color: white) {
+  background-color: $background;
+  color: $color;
+  border: 1px solid darken($background, 5%);
+
+  &:hover {
+    background-color: darken($background, 10%);
+    border-color: darken($background, 15%);
+  }
 }
