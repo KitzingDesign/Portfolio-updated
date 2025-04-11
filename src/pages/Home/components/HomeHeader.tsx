@@ -50,7 +50,7 @@ const HeaderText = styled.div`
     width: 90%;
     margin-bottom: 4.8rem;
     margin-top: 3.2rem;
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
   }
 
   & > h1 {

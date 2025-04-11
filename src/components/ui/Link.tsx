@@ -16,9 +16,10 @@ const StyledLink = styled(RouterLink)`
   font-family: sans-serif;
   cursor: pointer;
   position: relative;
+
   text-decoration: none;
   background: white;
-  font-size: 2rem;
+  font-size: var(--font-size-lg);
   box-shadow: 8px 8px 0 var(--color-primary); /* Orange shadow offset */
   transition: transform 0.1s ease, box-shadow 0.1s ease;
 

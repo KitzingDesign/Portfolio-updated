@@ -1,9 +1,8 @@
-// src/components/MasterThesisSection.tsx
 import styled from "@emotion/styled";
+import conceptImg from "@/assets/images/home/KnowledgeSharingMockup.webp"; // Adjust path as needed
 import StyledLink from "@components/ui/Link";
-import conceptImg from "@/assets/images/home/ThesisImg.png"; // Adjust the path as necessary
 
-interface MasterThesisSectionProps {
+interface KnowledgeSectionProps {
   fade?: boolean;
 }
 
@@ -13,33 +12,31 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 2rem;
 
   @media (orientation: portrait) {
     flex-direction: column-reverse;
     justify-content: center;
-    align-items: center;
     height: 100vh;
   }
 
   @media (orientation: portrait) and (max-width: 34.5em) {
-    height: 100vh;
     max-height: -webkit-fill-available;
     max-width: 80vw;
-    gap: 0px;
+    gap: 1rem;
   }
 `;
 
 const TextContainer = styled.div`
   width: 100%;
 
+  & > h2 {
+    font-size: var(--font-size-xxxl);
+  }
+
   @media (orientation: portrait) {
     width: 100%;
   }
-`;
-
-const Title = styled.h2`
-  font-size: var(--font-size-xxxl);
 `;
 
 const ImgContainer = styled.div`
@@ -54,34 +51,33 @@ const ImgContainer = styled.div`
   }
 `;
 
+const Text = styled.p`
+  margin: 2.4rem 0;
+  font-size: var(--font-size-lg);
+`;
+
 const ConceptImg = styled.img`
   width: 100%;
   height: auto;
-  layout: responsive;
   object-fit: contain;
 `;
 
-const Text = styled.p`
-  margin-top: 2.4rem;
-  font-size: var(--font-size-lg);
-  margin-bottom: 2.4rem;
-`;
-
-const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
+const KnowledgeSection: React.FC<KnowledgeSectionProps> = ({ fade }) => {
   return (
     <Container>
       <div>
         <TextContainer>
-          <Title>Master&lsquo;s Thesis</Title>
+          <h2>
+            Knowledge Sharing <br />
+            Platform
+          </h2>
           <Text>
-            The autonomous vehicles sector has brought computerization into
-            driving, a task that previously was solely for humans. This results
-            in companies providing software and annotation services for machine
-            learning, helping with labeling, categorizing, and tracking data.
-            This Master&lsquo;s thesis was conducted at one of these annotation
-            companies, Kognic.
+            Within every company, there is a wealth of knowledge, knowledge that
+            is invaluable but often forgotten. My classmate and I created a
+            platform to easily share this knowledge with others, for a more
+            efficient workplace.
           </Text>
-          <StyledLink to="/thesis">Learn more</StyledLink>
+          <StyledLink link="/">Read more</StyledLink>
         </TextContainer>
       </div>
 
@@ -89,7 +85,8 @@ const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
         <ImgContainer>
           <ConceptImg
             src={conceptImg}
-            alt="Computer displaying the master's thesis project"
+            alt="Mockup of Knowledge Sharing Platform"
+            loading="lazy"
           />
         </ImgContainer>
       </div>
@@ -97,4 +94,4 @@ const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
   );
 };
 
-export default MasterThesisSection;
+export default KnowledgeSection;

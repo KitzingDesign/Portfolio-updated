@@ -5,6 +5,7 @@ import HomeHeader from "./components/HomeHeader";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import MasterThesisSection from "./components/MastersThesis";
+import KnowledgeSection from "./components/KowledgeSection";
 
 // FullPage.js
 const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY;
@@ -21,7 +22,7 @@ const HomePage = () => {
           label: "", // Empty label
           position: "right", // Position doesn't matter since it's disabled
         }}
-        anchors={["home"]}
+        anchors={["home", "thesis", "knowledge"]}
         render={() => {
           return (
             <ReactFullpage.Wrapper>
@@ -30,6 +31,9 @@ const HomePage = () => {
               </div>
               <div className="section">
                 <MasterThesisSection />
+              </div>
+              <div className="section">
+                <KnowledgeSection />
               </div>
             </ReactFullpage.Wrapper>
           );
