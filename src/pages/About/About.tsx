@@ -1,47 +1,49 @@
-// src/pages/About/About.tsx
-import { motion } from "framer-motion";
-import { useEffect } from "react";
 import styles from "./About.module.scss";
+import WorkExperience from "./components/WorkExperience";
+import HeroImg from "@/assets/images/about/actionFigure.png";
 
 const AboutPage = () => {
-  // Simple fade animation on mount
-  useEffect(() => {
-    document.body.classList.add("page-loaded");
-    return () => document.body.classList.remove("page-loaded");
-  }, []);
-
   return (
-    <motion.main
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className={styles.container}
-    >
-      <section className={styles.hero}>
-        <h1>About Me</h1>
-        <p className={styles.subtitle}>Designer & Developer</p>
-      </section>
+    <div className={styles.container}>
+      <div className={styles.textContainer}>
+        <h2>Who am I?</h2>
+        <p>
+          My name is Jakob, and I'm a UX/UI designer, human researcher, product
+          developer, and music lover; everything from electronic music to jazz
+          resonates through my headphones. As a person, I'm outgoing and caring
+          about my surroundings, believing that everything is more enjoyable
+          when those around me are happy. My philosophy is that having fun
+          reflects positively on the results. As a designer, I'm always curious
+          and eager to learn new things. I love challenging myself and working
+          with diverse teams to get fresh ideas and perspectives. I'm especially
+          excited about new technologies like AI and ML and how they can improve
+          how we work with user experiences. To deepen my understanding of how
+          new technologies can be utilized, I actively explore AI-powered tools
+          to enhance my design process and create more intuitive user
+          interactions.
+        </p>
 
-      <section className={styles.content}>
-        <div className={styles.bio}>
-          <h2>My Journey</h2>
-          <p>
-            With 5+ years in digital design and frontend development, I bridge
-            aesthetics and functionality...
-          </p>
-        </div>
+        <h2>Work Experience</h2>
+        <WorkExperience
+          company="Google"
+          time="2020 - Present"
+          description="Developed new features for Google Search using React and TypeScript. Led a team of 5 engineers to deliver major updates."
+        />
+        <WorkExperience
+          company="Microsoft"
+          time="2018 - 2020"
+          description="Contributed to Azure cloud services development. Implemented critical security features that reduced vulnerabilities by 40%."
+        />
+      </div>
 
-        <div className={styles.skills}>
-          <h2>Core Skills</h2>
-          <ul>
-            <li>UI/UX Design</li>
-            <li>React & TypeScript</li>
-            <li>Design Systems</li>
-          </ul>
-        </div>
-      </section>
-    </motion.main>
+      <div className={styles.imgContainer}>
+        <img
+          src={HeroImg}
+          alt="Action figure of Jakob Kitzing in collectible packaging"
+          loading="lazy"
+        />
+      </div>
+    </div>
   );
 };
 

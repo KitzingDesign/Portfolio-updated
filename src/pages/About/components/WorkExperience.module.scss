@@ -1,0 +1,37 @@
+.workExperience {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.time {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.description {
+  margin: 0;
+  font-size: var(--font-size-base);
+  line-height: 1.5;
+  color: #444;
+}
