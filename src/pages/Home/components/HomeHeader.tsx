@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"; // or use your preferred routing solution
 import TextLoop from "@components/ui/TextLoop";
+import StyledLink from "@components/ui/Link";
 import BlobBackground from "@components/ui/BlobBackground";
 import styled from "@emotion/styled";
 
@@ -66,28 +66,6 @@ const HeaderText = styled.div`
   }
 `;
 
-const Button = styled(Link)`
-  display: inline-block;
-  font-size: 2rem;
-  font-weight: bold;
-  background-color: black;
-  border: none;
-  padding: 1.6rem 3.2rem;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background: white;
-    padding: 1.4rem 3rem;
-    border: 0.2rem solid black;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    color: black;
-  }
-`;
-
 const HeaderImg = styled.div`
   width: 80%;
 `;
@@ -104,7 +82,7 @@ const HomeHeader: React.FC<HomeHeaderProps> = () => {
             and what I am truly passionate about, is developing creative
             products and services where the user is at the center.
           </p>
-          <Button to="/about">More about me</Button>
+          <StyledLink to="/about">More about me</StyledLink>
         </HeaderText>
         <HeaderImg>
           <BlobBackground

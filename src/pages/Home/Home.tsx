@@ -4,6 +4,7 @@ import styles from "./Home.module.scss";
 import HomeHeader from "./components/HomeHeader";
 
 import ReactFullpage from "@fullpage/react-fullpage";
+import MasterThesisSection from "./components/MastersThesis";
 
 // FullPage.js
 const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY;
@@ -26,6 +27,9 @@ const HomePage = () => {
             <ReactFullpage.Wrapper>
               <div className="section">
                 <HomeHeader />
+              </div>
+              <div className="section">
+                <MasterThesisSection />
               </div>
             </ReactFullpage.Wrapper>
           );
