@@ -1,0 +1,23 @@
+@use "reset";
+@use "variables" as *;
+@use "mixins" as *;
+@use "typography";
+@use "animations";
+
+:root {
+  // CSS Custom Properties for runtime theming
+  --color-primary: #{map-get($colors, primary)};
+  --color-secondary: #{map-get($colors, secondary)};
+}
+
+body {
+  background-color: $light;
+  transition: background-color 0.3s ease;
+}
+
+// Dark mode (optional)
+[data-theme="dark"] {
+  --color-primary: #{darken(map-get($colors, primary), 10%)};
+  background-color: $dark;
+  color: $light;
+}
