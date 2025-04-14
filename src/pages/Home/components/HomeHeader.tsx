@@ -88,7 +88,7 @@ const HomeHeader: React.FC<HomeHeaderProps> = () => {
           <BlobBackground
             imageSrc={profilePicture}
             imageAlt="Jakob Kitzing"
-            blobColor="#3a86ff"
+            blobColor="var(--color-primary)"
             blobOpacity={0.8}
           />
         </HeaderImg>

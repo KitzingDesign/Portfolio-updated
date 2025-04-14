@@ -28,8 +28,8 @@
   }
 
   // Spacing
-  @each $space, $value in $spacers {
-    --spacer-#{$space}: #{$value};
+  @each $space, $value in $spacing {
+    --space-#{$space}: #{$value};
   }
 
   // Border radius

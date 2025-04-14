@@ -17,6 +17,10 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "thesis", element: <About /> },
       { path: "knowledge", element: <About /> },
+      { path: "emotion", element: <About /> },
+      { path: "digitalization", element: <About /> },
+      { path: "bachelorsThesis", element: <About /> },
+      { path: "prosex", element: <About /> },
     ],
   },
 ]);

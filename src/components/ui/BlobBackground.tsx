@@ -48,7 +48,7 @@ const ProfileImg = styled.div`
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
-  width: 80%;
+  width: 60%;
   z-index: 1;
 
   img {
@@ -70,6 +70,8 @@ const ShapeBlob = styled.div<{ blobColor: string; blobOpacity: number }>`
     movement_one 40s ease-in-out infinite both;
   opacity: ${(props) => props.blobOpacity};
   background-color: ${(props) => props.blobColor};
+  overflow: hidden;
+  z-index: 0;
 `;
 
 const BlobBackground: React.FC<BlobBackgroundProps> = ({
@@ -92,7 +94,8 @@ const BlobBackground: React.FC<BlobBackgroundProps> = ({
           loading="lazy"
         />
       </ProfileImg>
-      <ShapeBlob blobColor={blobColor} blobOpacity={blobOpacity} />
+
+      <ShapeBlob blobColor={blobColor} blobOpacity={blobOpacity}></ShapeBlob>
     </Container>
   );
 };

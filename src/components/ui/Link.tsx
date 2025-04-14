@@ -8,25 +8,31 @@ import {
 
 // Base styles matching your Button design
 const StyledLink = styled(RouterLink)`
-  background-color: none; /* Match the beige-ish background */
-  color: black;
+  background-color: white;
+  color: var(--color-text);
   border: 2px solid black;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: var(--font-size-lg);
   font-family: sans-serif;
   cursor: pointer;
   position: relative;
-
   text-decoration: none;
-  background: white;
-  font-size: var(--font-size-lg);
-  box-shadow: 8px 8px 0 var(--color-primary); /* Orange shadow offset */
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+  box-shadow: 6px 6px 0 var(--color-primary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
 
   &:hover {
-    background: white;
-    border: 0.2rem solid black;
-    color: black;
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--color-primary);
+    padding: 12px 24px;
+    color: var(--color-text);
+
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translate(0px, 0px);
+    box-shadow: 4px 4px 0 var(--color-primary);
   }
 `;
 
