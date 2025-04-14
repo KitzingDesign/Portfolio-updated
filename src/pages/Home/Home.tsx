@@ -30,7 +30,7 @@ const HomePage = () => {
           "home",
           "thesis",
           "knowledge",
-          "emotion",
+          "calmifly",
           "digitalization",
           "bachelorThesis",
           "prosex",

@@ -78,7 +78,7 @@ const EmotionSection = ({
       challenge this statement and illustrate what that sentence actually means.
     </>
   ),
-  link = "/Emotions",
+  link = "/calmifly",
   imageSrc = EmotionImg,
   imageAlt = "Mockup of the Calmyfly app",
 }: EmotionSectionProps) => {
@@ -88,7 +88,7 @@ const EmotionSection = ({
         <TextContainer>
           <h2>{title}</h2>
           <Text>{description}</Text>
-          <StyledLink link={link}>Read more</StyledLink>
+          <StyledLink to={link}>Read more</StyledLink>
         </TextContainer>
       </div>
 

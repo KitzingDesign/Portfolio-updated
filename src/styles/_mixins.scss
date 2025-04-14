@@ -1,15 +1,43 @@
 @use "sass:map";
+@use "sass:meta";
 @use "variables" as *;
 
 // Media query mixin
-@mixin media-breakpoint-up($breakpoint) {
-  @if map.has-key($breakpoints, $breakpoint) {
-    $min: map.get($breakpoints, $breakpoint);
+@mixin media-breakpoint-up($name) {
+  $min: map.get($breakpoints, $name);
+  @if meta.type-of($min) == "number" {
     @media (min-width: $min) {
       @content;
     }
   } @else {
-    @error "Unknown breakpoint `#{$breakpoint}`.";
+    @error "Breakpoint #{$name} not found in $breakpoints map";
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  $max: map.get($breakpoints, $name);
+  @if meta.type-of($max) == "number" {
+    // Convert to ems for better accessibility
+    $max-em: if(unit($max) == "px", $max / 16 * 1em, $max);
+    @media (max-width: $max-em) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoint #{$name} not found in $breakpoints map";
+  }
+}
+
+@mixin media-breakpoint-between($lower, $upper) {
+  $min: map.get($breakpoints, $lower);
+  $max: map.get($breakpoints, $upper);
+
+  @if meta.type-of($min) == "number" and meta.type-of($max) == "number" {
+    $max-em: if(unit($max) == "px", $max / 16 * 1em, $max);
+    @media (min-width: $min) and (max-width: $max-em) {
+      @content;
+    }
+  } @else {
+    @error "Breakpoints #{$lower} or #{$upper} not found";
   }
 }
 

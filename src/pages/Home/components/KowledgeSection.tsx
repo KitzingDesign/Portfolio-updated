@@ -77,7 +77,7 @@ const KnowledgeSection: React.FC<KnowledgeSectionProps> = ({ fade }) => {
             platform to easily share this knowledge with others, for a more
             efficient workplace.
           </Text>
-          <StyledLink link="/">Read more</StyledLink>
+          <StyledLink to="/knowledge">Read more</StyledLink>
         </TextContainer>
       </div>
 

@@ -7,6 +7,8 @@ import App from "./App.tsx";
 // Pages
 import HomePage from "./pages/Home/Home.tsx";
 import About from "./pages/About/About.tsx";
+import CalmiflyPage from "./pages/calmifly/Calmifly.tsx";
+import KnowledgeSharingPage from "./pages/knowledgeSharing/KnowledgeSharing.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +18,8 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "about", element: <About /> },
       { path: "thesis", element: <About /> },
-      { path: "knowledge", element: <About /> },
-      { path: "emotion", element: <About /> },
+      { path: "knowledge", element: <KnowledgeSharingPage /> },
+      { path: "calmifly", element: <CalmiflyPage /> },
       { path: "digitalization", element: <About /> },
       { path: "bachelorsThesis", element: <About /> },
       { path: "prosex", element: <About /> },

@@ -6,9 +6,9 @@ html {
 // Colors
 $colors: (
   primary: #190dfe,
-  secondary: #ef9651,
+  secondary: #f45d48,
   tertiary: #ec5228,
-  light: #ffffff,
+  light: #f8f9fa,
   dark: #212529,
   text: #333333,
   gray: #6c757d,
@@ -45,6 +45,7 @@ $font-weights: (
   light: 300,
   regular: 400,
   medium: 500,
+  semi-bold: 600,
   bold: 700,
 );
 

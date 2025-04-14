@@ -1,0 +1,101 @@
+// Nuclear option - guaranteed to work
+:global {
+  .splide__pagination__page {
+    background: #d1d5db !important; // Inactive color
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 6px !important;
+    transition: all 0.3s ease !important;
+
+    &.is-active {
+      background: var(--color-primary) !important; // Active color (blue)
+      transform: scale(1.2) !important;
+    }
+  }
+}
+
+.container {
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 3.6rem;
+
+  h2 {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-semi-bold);
+    margin-bottom: 1.6rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 90vw;
+    margin-top: 2.4rem;
+
+    h2 {
+      font-size: var(--font-size-xxl);
+      margin-bottom: var(--space-xxl);
+    }
+  }
+}
+
+.carouselContainer {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  .splide {
+    width: 100%;
+    margin: 0 auto;
+
+    .splide__track {
+      overflow: visible;
+    }
+
+    .splide__slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      height: auto;
+    }
+    .splide__pagination__page.is-active {
+      background: #4f46e5 !important;
+    }
+
+    // Custom pagination - this is the key part
+    .splide__pagination {
+      bottom: -1.5rem; // Adjust as needed
+
+      .splide__pagination__page {
+        background: #d1d5db; // Inactive color
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+        transition: all 0.3s ease;
+        opacity: 1;
+
+        // Active state
+        &.is-active {
+          background: #4f46e5 !important; // Active color (blue in your example)
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+// Image container
+.imgContainer {
+  width: 100%;
+  height: 100%; // Take full slide height
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%; // Ensure image doesn't overflow
+    max-height: 100%; // Prevent vertical overflow
+    width: auto; // Respect original aspect ratio
+    height: auto;
+    object-fit: contain; // Fit entire image without cropping
+    border-radius: 0.5rem;
+  }
+}

@@ -1,0 +1,98 @@
+.footer {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  margin-top: var(--space-xxl);
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.year {
+  font-size: var(--font-size-xl);
+  opacity: 0.5;
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.ctaText {
+  font-size: var(--font-size-lg);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+}
+
+.ctaButton {
+  background-color: transparent;
+  color: var(--color-text);
+  border: 1px solid var(--color-text);
+  padding: 1rem 2.5rem;
+  font-size: var(--font-size-base);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.socialLink {
+  color: var(--color-text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: var(--font-size-sm);
+  position: relative;
+  padding-bottom: 0.3rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-text);
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.credits {
+  margin-top: 3rem;
+  font-size: var(--font-size-xs);
+  opacity: 0.6;
+}
+
+// Responsive adjustments
+@media screen and (max-width: 1200px) {
+  .footer {
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .socials {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

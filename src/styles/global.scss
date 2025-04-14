@@ -4,6 +4,9 @@
 @use "mixins";
 @use "base";
 
+@forward "mixins";
+@forward "variables";
+
 :root {
   // CSS Custom Properties for runtime theming
   --color-primary: #{map.get($colors, primary)};
@@ -35,6 +38,11 @@
   // Border radius
   @each $name, $value in $border-radius {
     --border-radius-#{$name}: #{$value};
+  }
+
+  // breakpoint radius
+  @each $name, $value in $breakpoints {
+    --breakpoint-#{$name}: #{$value};
   }
 }
 
@@ -77,64 +85,5 @@ body {
 @each $weight, $value in $font-weights {
   .fw-#{$weight} {
     font-weight: var(--font-weight-#{$weight});
-  }
-}
-
-@each $space, $value in $spacers {
-  .m-#{$space} {
-    margin: var(--spacer-#{$space});
-  }
-  .mt-#{$space},
-  .my-#{$space} {
-    margin-top: var(--spacer-#{$space});
-  }
-  .mb-#{$space},
-  .my-#{$space} {
-    margin-bottom: var(--spacer-#{$space});
-  }
-  .ml-#{$space},
-  .mx-#{$space} {
-    margin-left: var(--spacer-#{$space});
-  }
-  .mr-#{$space},
-  .mx-#{$space} {
-    margin-right: var(--spacer-#{$space});
-  }
-  .p-#{$space} {
-    padding: var(--spacer-#{$space});
-  }
-  .pt-#{$space},
-  .py-#{$space} {
-    padding-top: var(--spacer-#{$space});
-  }
-  .pb-#{$space},
-  .py-#{$space} {
-    padding-bottom: var(--spacer-#{$space});
-  }
-  .pl-#{$space},
-  .px-#{$space} {
-    padding-left: var(--spacer-#{$space});
-  }
-  .pr-#{$space},
-  .px-#{$space} {
-    padding-right: var(--spacer-#{$space});
-  }
-}
-
-// Responsive utilities
-@each $breakpoint, $value in $breakpoints {
-  @include mixins.media-breakpoint-up($breakpoint) {
-    @each $size, $font-size in $font-sizes {
-      .text-#{$breakpoint}-#{$size} {
-        font-size: var(--font-size-#{$size});
-      }
-    }
-
-    @each $space, $spacer in $spacers {
-      .m-#{$breakpoint}-#{$space} {
-        margin: var(--spacer-#{$space});
-      }
-      // Continue for other margin and padding variations...
-    }
   }
 }

@@ -1,0 +1,41 @@
+.container {
+  width: 70vw;
+  margin: 0 auto;
+  p {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-regular);
+    margin-bottom: var(--space-lg);
+  }
+  h2 {
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-semi-bold);
+    margin-bottom: var(--space-md);
+  }
+}
+
+// Image container
+.imgContainer {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%; // Ensure image doesn't overflow
+    max-height: 100%; // Prevent vertical overflow
+    width: auto; // Respect original aspect ratio
+    height: auto;
+    object-fit: contain; // Fit entire image without cropping
+  }
+}
+
+.swiperContainer {
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Media queries
+@media (max-width: 25em) {
+  .container {
+    width: 80vw;
+  }
+}
