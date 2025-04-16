@@ -1,6 +1,6 @@
 import React from "react";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
-import { FiMail, FiLinkedin, FiGithub } from "react-icons/fi";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FiMail } from "react-icons/fi";
 import styles from "./Contacts.module.scss";
 
 const Contacts: React.FC = () => {

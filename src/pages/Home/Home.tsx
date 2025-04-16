@@ -1,6 +1,5 @@
 // src/pages/Home/Home.tsx
-import { motion } from "framer-motion";
-import styles from "./Home.module.scss";
+
 import HomeHeader from "./components/HomeHeader";
 
 import ReactFullpage from "@fullpage/react-fullpage";
@@ -9,7 +8,6 @@ import KnowledgeSection from "./components/KowledgeSection";
 import EmotionSection from "./components/EmotionSection";
 import DigitalizationSection from "./components/DigitalizationSection";
 import BachelorThesisSection from "./components/BachelorThesisSection";
-import ProsexSection from "./components/ProsexSection";
 
 // FullPage.js
 const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY;

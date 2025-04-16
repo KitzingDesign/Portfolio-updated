@@ -50,8 +50,6 @@ const Link = ({
   ...props
 }: LinkProps) => {
   // Combine size class with any additional className
-  const sizeClass = size !== "m" ? size : "";
-  const combinedClassName = `${className} ${sizeClass}`.trim();
 
   return <StyledLink {...props}>{children}</StyledLink>;
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./WorkExperience.module.scss"; // Note the .module.scss extension
 
 interface WorkExperienceProps {

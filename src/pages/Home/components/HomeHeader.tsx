@@ -1,6 +1,6 @@
-import TextLoop from "@components/ui/TextLoop";
-import StyledLink from "@components/ui/Link";
-import BlobBackground from "@components/ui/BlobBackground";
+import TextLoop from "@/components/ui/TextLoop";
+import StyledLink from "@/components/ui/Link";
+import BlobBackground from "@/components/ui/BlobBackground";
 import styled from "@emotion/styled";
 
 import profilePicture from "@/assets/images/home/Startbild.svg"; // Adjust the path as necessary
