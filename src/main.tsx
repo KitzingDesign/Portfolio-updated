@@ -11,6 +11,7 @@ import CalmiflyPage from "./pages/calmifly/Calmifly.tsx";
 import KnowledgeSharingPage from "./pages/knowledgeSharing/KnowledgeSharing.tsx";
 import DigitalizationPage from "./pages/digitalization/Digitalization.tsx";
 import MasterThesisPage from "./pages/masterThesis/MasterThesis.tsx";
+import BachelorPage from "./pages/bachelor/BachelorPage.tsx";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       { path: "knowledge", element: <KnowledgeSharingPage /> },
       { path: "calmifly", element: <CalmiflyPage /> },
       { path: "digitalization", element: <DigitalizationPage /> },
-      { path: "bachelorsThesis", element: <About /> },
+      { path: "bachelorThesis", element: <BachelorPage /> },
     ],
   },
 ]);

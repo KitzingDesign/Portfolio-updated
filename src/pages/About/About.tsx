@@ -145,7 +145,7 @@ const AboutPage = () => {
           <div className={styles.textSection}>
             <motion.div
               className={styles.coverBox}
-              initial={{ width: "20%" }}
+              initial={{ width: "45%" }}
               animate={firstCoverControls}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             />
@@ -172,7 +172,7 @@ const AboutPage = () => {
           <div className={styles.textSection}>
             <motion.div
               className={styles.coverBox}
-              initial={{ width: "35%" }}
+              initial={{ width: "65%" }}
               animate={secondCoverControls}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             />
@@ -206,7 +206,7 @@ const AboutPage = () => {
           <div className={styles.textSection}>
             <motion.div
               className={styles.coverBox}
-              initial={{ width: "15%" }}
+              initial={{ width: "35%" }}
               animate={thirdCoverControls}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             />

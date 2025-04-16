@@ -1,0 +1,84 @@
+.container {
+  height: 100vh;
+  max-width: 95vw;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 84em) {
+    height: inherit;
+  }
+}
+
+.headings {
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.vertical {
+  padding-bottom: 50px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.year {
+  color: #c0d1c5;
+  font-weight: 500;
+  font-size: 20vw;
+}
+
+.season {
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: 400;
+  line-height: 30%;
+  font-size: 7vw;
+  margin-bottom: 20px;
+  text-decoration: underline black 0.5rem;
+
+  @media (max-width: 84em) {
+    margin-bottom: 70px;
+  }
+  @media (max-width: 75em) {
+    margin-bottom: 40px;
+  }
+  @media (max-width: 50em) {
+    margin-bottom: 20px;
+  }
+}
+
+.above {
+  position: absolute;
+  left: 7vw;
+  font-size: 6vw;
+  bottom: 120px;
+
+  @media (max-width: 84em) {
+    bottom: 100px;
+  }
+  @media (max-width: 75em) {
+    bottom: 90px;
+  }
+  @media (max-width: 50em) {
+    bottom: 90px;
+  }
+}
+
+.img {
+  width: 55vw;
+  z-index: -1;
+  position: relative;
+}
+
+.nr {
+  position: absolute;
+  right: 0%;
+  bottom: 50%;
+  transform: translateY(140%);
+  font-size: 24vw;
+  line-height: 0.6;
+  color: #0b0a11;
+  opacity: 0.09;
+}
