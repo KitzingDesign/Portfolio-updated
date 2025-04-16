@@ -1,4 +1,4 @@
-import Koncept from "../UI/koncept";
+// import Koncept from "../UI/koncept";
 import styles from "./kandidatarbeteKoncept.module.scss";
 
 const Concept = () => {
@@ -16,9 +16,9 @@ const Concept = () => {
         viewed below
       </p>
       <div className={styles.koncepts} data-aos="fade-up">
-        <Koncept titel="Concept A" img="/Kandidat/KonceptA.jpg" />
+        {/* <Koncept titel="Concept A" img="/Kandidat/KonceptA.jpg" />
         <Koncept titel="Concept B" img="/Kandidat/KonceptB.jpg" />
-        <Koncept titel="Concept C" img="/Kandidat/KonceptC.webp" />
+        <Koncept titel="Concept C" img="/Kandidat/KonceptC.webp" /> */}
       </div>
     </div>
   );
