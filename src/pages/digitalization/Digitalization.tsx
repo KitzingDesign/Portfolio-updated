@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import AOS from "aos";
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Layout/Footer";
 import DigiContent from "./components/DigiContent";
@@ -11,10 +10,6 @@ interface DigitalizationPageProps {
 }
 
 const DigitalizationPage: React.FC<DigitalizationPageProps> = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
   return (
     <>
       <Helmet>

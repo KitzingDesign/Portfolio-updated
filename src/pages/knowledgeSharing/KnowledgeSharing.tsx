@@ -1,22 +1,10 @@
-import { Fragment, useEffect } from "react";
-
-import AOS from "aos";
-
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Layout/Footer";
 import KnowledgeHeader from "./components/KnowledgeSharingHeader";
 import KnowledgeBackground from "./components/KnowledgeSharingBackground";
 import KnowledgeContent from "./components/KnowledgeSharingContent";
 
-interface HertzPageProps {
-  // Add any props you need here
-}
-
-const KnowledgeSharingPage: React.FC<HertzPageProps> = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
+const KnowledgeSharingPage = () => {
   return (
     <>
       <Helmet>
