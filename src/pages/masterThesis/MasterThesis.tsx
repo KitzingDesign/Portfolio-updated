@@ -1,8 +1,3 @@
-import { useEffect } from "react";
-
-import AOS from "aos";
-import styled from "@emotion/styled";
-
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Layout/Footer";
 import MasterThesisHeader from "./components/MasterThesisHeader";
@@ -14,25 +9,11 @@ import ResearchQuestion from "./components/researchQuestion/ResearchQuestion";
 import PhaseThree from "./components/phaseThree/PhaseThree";
 import SolutionSection from "./components/finalSolution/SolutionSection";
 
-// Emotion styles
-const Sticky = styled.p`
-  writing-mode: vertical-rl;
-  bottom: 1%;
-  left: 1%;
-  position: fixed;
-  text-transform: uppercase;
-  transform: rotate(180deg);
-`;
-
 interface MasterThesisPageProps {
   // Add any props you need here
 }
 
 const MasterThesisPage: React.FC<MasterThesisPageProps> = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
-
   return (
     <>
       <Helmet>

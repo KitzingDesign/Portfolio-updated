@@ -43,10 +43,6 @@ const CopyRightText = styled.p`
   font-size: var(--font-size-base);
 `;
 
-interface KnowledgeBackgroundProps {
-  // future props
-}
-
 const KnowledgeBackground = () => {
   return (
     <Container>

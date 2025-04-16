@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import styles from "./digiHeader.module.css";
-
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -297,12 +294,6 @@ const OrangeBackground = styled.div`
 const Carousell = styled(Swiper)``;
 
 const DigiHeader = () => {
-  const [domLoaded, setDomLoaded] = useState(false);
-
-  useEffect(() => {
-    setDomLoaded(true);
-  }, []);
-
   return (
     <UpperContainer>
       <KryImg>
@@ -310,109 +301,105 @@ const DigiHeader = () => {
           <Phone>
             <img src={phoneImg} alt="Iphone" />
           </Phone>
-          {domLoaded && (
-            <Swipes>
-              <Carousell
-                id="swiper-color"
-                modules={[Navigation, Pagination]}
-                slidesPerView={1}
-                spaceBetween={0}
-                loop={true}
-                style={{ width: "100%", height: "100%" }}
-              >
-                <SwiperSlide>
-                  <Swipe>
-                    <FirstSlide>
-                      <WhiteSide>
-                        <OrangeCicle />
-                        <LeftArrow>{/* <SwipeArrow /> */}</LeftArrow>
-                      </WhiteSide>
-                      <OrangeSide>
-                        <WhiteCicle />
-                        <RightArrow>{/* <SwipeArrow /> */}</RightArrow>
-                      </OrangeSide>
-                    </FirstSlide>
-                  </Swipe>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <Swipe>
-                    <SecondSlide>
-                      <ProfileInfo>
-                        <ProfileImg>
-                          <img src={headImg} alt="Jakob Kitzings head" />
-                        </ProfileImg>
-                        <p>
-                          <b>JakobKitzingDesign</b> <br /> sponsored
-                        </p>
-                      </ProfileInfo>
-                      <SwiperImg>
-                        <Carousell
-                          id="swiper-color"
-                          modules={[Pagination]}
-                          slidesPerView={1}
-                          spaceBetween={0}
-                          pagination={{
-                            clickable: false,
-                          }}
-                          loop={true}
-                          style={{ width: "100%", height: "100%" }}
-                        >
-                          <SwiperSlide>
-                            <ImgContainer>
-                              <img
-                                src={img1}
-                                alt="Elder commercial on busstop"
-                              />
-                            </ImgContainer>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                            <ImgContainer>
-                              <img
-                                src={img2}
-                                alt="Ely commercial screen display"
-                              />
-                            </ImgContainer>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                            <ImgContainer>
-                              <img
-                                width={1000}
-                                height={560}
-                                src={img3}
-                                alt="Jury phone commercial"
-                              />
-                            </ImgContainer>
-                          </SwiperSlide>
-                          <SwiperSlide>
-                            <ImgContainer>
-                              <img
-                                width={1000}
-                                height={600}
-                                src={img4}
-                                alt="Display of Gyno commercial on a tram"
-                              />
-                            </ImgContainer>
-                          </SwiperSlide>
-                        </Carousell>
-                      </SwiperImg>
-                      <Iconer>
-                        <div>
-                          <HeartImg />
-                          <ChatImg />
-                          <PlaneImg />
-                        </div>
-                        <BookMarkImg />
-                      </Iconer>
-                      <TextLikes>
-                        <b>4m likes</b> <br /> Häng med in i framtiden, alla
-                        appar går att finna på JakobKitzingDesign.com
-                      </TextLikes>
-                    </SecondSlide>
-                  </Swipe>
-                </SwiperSlide>
-              </Carousell>
-            </Swipes>
-          )}
+
+          <Swipes>
+            <Carousell
+              id="swiper-color"
+              modules={[Navigation, Pagination]}
+              slidesPerView={1}
+              spaceBetween={0}
+              loop={true}
+              style={{ width: "100%", height: "100%" }}
+            >
+              <SwiperSlide>
+                <Swipe>
+                  <FirstSlide>
+                    <WhiteSide>
+                      <OrangeCicle />
+                      <LeftArrow>{/* <SwipeArrow /> */}</LeftArrow>
+                    </WhiteSide>
+                    <OrangeSide>
+                      <WhiteCicle />
+                      <RightArrow>{/* <SwipeArrow /> */}</RightArrow>
+                    </OrangeSide>
+                  </FirstSlide>
+                </Swipe>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Swipe>
+                  <SecondSlide>
+                    <ProfileInfo>
+                      <ProfileImg>
+                        <img src={headImg} alt="Jakob Kitzings head" />
+                      </ProfileImg>
+                      <p>
+                        <b>JakobKitzingDesign</b> <br /> sponsored
+                      </p>
+                    </ProfileInfo>
+                    <SwiperImg>
+                      <Carousell
+                        id="swiper-color"
+                        modules={[Pagination]}
+                        slidesPerView={1}
+                        spaceBetween={0}
+                        pagination={{
+                          clickable: false,
+                        }}
+                        loop={true}
+                        style={{ width: "100%", height: "100%" }}
+                      >
+                        <SwiperSlide>
+                          <ImgContainer>
+                            <img src={img1} alt="Elder commercial on busstop" />
+                          </ImgContainer>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <ImgContainer>
+                            <img
+                              src={img2}
+                              alt="Ely commercial screen display"
+                            />
+                          </ImgContainer>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <ImgContainer>
+                            <img
+                              width={1000}
+                              height={560}
+                              src={img3}
+                              alt="Jury phone commercial"
+                            />
+                          </ImgContainer>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                          <ImgContainer>
+                            <img
+                              width={1000}
+                              height={600}
+                              src={img4}
+                              alt="Display of Gyno commercial on a tram"
+                            />
+                          </ImgContainer>
+                        </SwiperSlide>
+                      </Carousell>
+                    </SwiperImg>
+                    <Iconer>
+                      <div>
+                        <HeartImg />
+                        <ChatImg />
+                        <PlaneImg />
+                      </div>
+                      <BookMarkImg />
+                    </Iconer>
+                    <TextLikes>
+                      <b>4m likes</b> <br /> Häng med in i framtiden, alla appar
+                      går att finna på JakobKitzingDesign.com
+                    </TextLikes>
+                  </SecondSlide>
+                </Swipe>
+              </SwiperSlide>
+            </Carousell>
+          </Swipes>
         </div>
       </KryImg>
 
