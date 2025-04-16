@@ -8,7 +8,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"), // Maps `@/` to `src/`
-      "@components": path.resolve(__dirname, "./src/components"), // Maps `@components/` to `src/components/`
     },
   },
   css: {

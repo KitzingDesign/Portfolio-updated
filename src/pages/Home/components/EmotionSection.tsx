@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import { ReactNode } from "react";
 import EmotionImg from "@/assets/images/home/EmotionsMockup.png";
 
-import StyledLink from "@components/ui/Link";
+import StyledLink from "@/components/ui/Link";
 
 interface EmotionSectionProps {
   title?: string;
