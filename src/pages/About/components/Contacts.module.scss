@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: var(--space-xxxl);
+}
+
+.title {
+  font-size: var(--font-size-xxl);
+  color: var(--color-text);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 3rem;
+  color: var(--color-text);
+  transition: transform 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.linkedin {
+  color: var(--color-text);
+}

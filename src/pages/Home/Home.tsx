@@ -33,7 +33,6 @@ const HomePage = () => {
           "calmifly",
           "digitalization",
           "bachelorThesis",
-          "prosex",
         ]}
         render={() => {
           return (
@@ -55,9 +54,6 @@ const HomePage = () => {
               </div>
               <div className="section">
                 <BachelorThesisSection />
-              </div>
-              <div className="section">
-                <ProsexSection />
               </div>
             </ReactFullpage.Wrapper>
           );

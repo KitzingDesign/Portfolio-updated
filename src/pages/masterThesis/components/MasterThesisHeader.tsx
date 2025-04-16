@@ -1,7 +1,8 @@
-import { styled, keyframes } from "@emotion/react";
-import Image from "next/image"; // Or use regular img tag if not using Next.js
+import { keyframes } from "@emotion/react";
+import styled from "@emotion/styled";
 
-// Styled components
+import heroImg from "@/assets/images/mastersThesis/HeroMasterThesis.png";
+
 const Container = styled.div`
   height: 100vh;
   max-width: 95vw;
@@ -123,13 +124,14 @@ const Above = styled.h2`
 const Img = styled.div`
   width: 55vw;
   z-index: -1;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
 `;
 
-interface MasterThesisHeaderProps {
-  // Add any props you need here
-}
-
-const MasterThesisHeader: React.FC<MasterThesisHeaderProps> = () => {
+const MasterThesisHeader = () => {
   return (
     <Container>
       <Headings>
@@ -137,19 +139,11 @@ const MasterThesisHeader: React.FC<MasterThesisHeaderProps> = () => {
           <Year>2024</Year>
           <Season>Spring</Season>
         </Vertical>
-        <Above>Master's Thesis</Above>
+        <Above>Master&lsquo;s Thesis</Above>
       </Headings>
       <Img>
-        <img
-          src="/masterThesis/HeroImg.png"
-          alt="Mockup on computer screen"
-          style={{
-            width: "100%",
-            height: "auto",
-            borderRadius: "10px",
-            objectFit: "contain",
-          }}
-        />
+        {/* Using standard img tag with Vite */}
+        <img src={heroImg} alt="Lidar radar view of an annotated image" />
       </Img>
     </Container>
   );

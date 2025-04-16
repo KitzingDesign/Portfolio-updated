@@ -1,19 +1,18 @@
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
 
 import AOS from "aos";
 import styled from "@emotion/styled";
-import MasterThesisHeader from "../../components/masterTheses/matersThesisHeader";
-import MasterThesisBackground from "../../components/masterTheses/masterThesisBackground";
-import ResearchQuestion from "../../components/masterTheses/researchQuestion/ResearchQuestion";
-import MicroAdjustments from "../../components/masterTheses/microAdjustments/MicroAdjustments";
-import TripleDiamond from "../../components/masterTheses/tripleDiamond/TripleDiamond";
-import PhaseOne from "../../components/masterTheses/phase1/PhaseOne";
-import PhaseTwo from "../../components/masterTheses/phase2/PhaseTwo";
-import PhaseThree from "../../components/masterTheses/phase3/PhaseThree";
-import SolutionSection from "../../components/masterTheses/finalSolution/SolutionSection";
-import DesignGuidelines from "../../components/masterTheses/designGuidelines/DesignGuidelines";
+
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Layout/Footer";
+import MasterThesisHeader from "./components/MasterThesisHeader";
+import MicroAdjustments from "./components/microAdjustments/MicroAdjustments";
+import TripleDiamond from "./components/TripleDiamond";
+import PhaseOne from "./components/phaseOne/PhaseOne";
+import PhaseTwo from "./components/phaseTwo/PhaseTwo";
+import ResearchQuestion from "./components/researchQuestion/ResearchQuestion";
+import PhaseThree from "./components/phaseThree/PhaseThree";
+import SolutionSection from "./components/finalSolution/SolutionSection";
 
 // Emotion styles
 const Sticky = styled.p`
@@ -46,18 +45,20 @@ const MasterThesisPage: React.FC<MasterThesisPageProps> = () => {
       </Helmet>
 
       <MasterThesisHeader />
-      <MasterThesisBackground />
+      {/* <MasterThesisBackground /> */}
       <ResearchQuestion />
       <MicroAdjustments />
       <TripleDiamond />
       <PhaseOne />
       <PhaseTwo />
       <PhaseThree />
+
       <SolutionSection />
-      <DesignGuidelines />
+      {/*
+      <DesignGuidelines /> */}
       <Footer />
     </>
   );
 };
 
-export default withTransition(MasterThesisPage);
+export default MasterThesisPage;

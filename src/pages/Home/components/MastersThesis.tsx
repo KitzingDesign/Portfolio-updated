@@ -13,7 +13,7 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--space-lg);
 
   @media (orientation: portrait) {
     flex-direction: column-reverse;
@@ -22,11 +22,11 @@ const Container = styled.div`
     height: 100vh;
   }
 
-  @media (orientation: portrait) and (max-width: 34.5em) {
+  @media (orientation: portrait) and (max-width: 576px) {
     height: 100vh;
     max-height: -webkit-fill-available;
-    max-width: 80vw;
-    gap: 0px;
+    max-width: 85vw;
+    gap: var(--space-md);
   }
 `;
 
@@ -36,10 +36,6 @@ const TextContainer = styled.div`
   @media (orientation: portrait) {
     width: 100%;
   }
-`;
-
-const Title = styled.h2`
-  font-size: var(--font-size-xxxl);
 `;
 
 const ImgContainer = styled.div`
@@ -62,9 +58,8 @@ const ConceptImg = styled.img`
 `;
 
 const Text = styled.p`
-  margin-top: 2.4rem;
-  font-size: var(--font-size-lg);
-  margin-bottom: 2.4rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xxl);
 `;
 
 const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
@@ -72,7 +67,7 @@ const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
     <Container>
       <div>
         <TextContainer>
-          <Title>Master&lsquo;s Thesis</Title>
+          <h1>Master&lsquo;s Thesis</h1>
           <Text>
             The autonomous vehicles sector has brought computerization into
             driving, a task that previously was solely for humans. This results
@@ -81,7 +76,7 @@ const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
             This Master&lsquo;s thesis was conducted at one of these annotation
             companies, Kognic.
           </Text>
-          <StyledLink to="/thesis">Learn more</StyledLink>
+          <StyledLink to="/thesis">Read more</StyledLink>
         </TextContainer>
       </div>
 

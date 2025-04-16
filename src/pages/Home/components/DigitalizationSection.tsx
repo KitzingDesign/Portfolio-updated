@@ -30,7 +30,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10rem;
+  gap: var(--space-xxxl);
 
   @media (orientation: portrait) {
     height: 100vh;
@@ -43,30 +43,22 @@ const Content = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
+  gap: var(--space-xxxl);
 
-  & > h2 {
+  & > h1 {
     width: 80vw;
     margin: 0 auto;
     color: white;
-    font-size: 8rem;
   }
 
   @media (max-width: 51em) and (orientation: landscape) {
     gap: 4rem;
-
-    & > h2 {
-      font-size: 6.4rem;
-    }
   }
 
   @media (orientation: portrait) {
     gap: 6vh;
     justify-content: center;
-
-    & > h2 {
-      font-size: 6.4rem;
-    }
   }
 `;
 
@@ -75,7 +67,7 @@ const AppGrid = styled.div`
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-xxl);
+  gap: var(--space-lg);
 
   @media (orientation: portrait) {
     grid-template-columns: repeat(6, 1fr);
@@ -94,12 +86,12 @@ const GridItem = styled.div`
 
 const StyledLink = styled.div`
   &:hover {
-    font-style: italic;
     cursor: pointer;
+    text-decoration: none;
   }
 `;
 
-const ProjectLink = styled.div`
+const ProjectLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,31 +99,35 @@ const ProjectLink = styled.div`
   box-sizing: inline-block;
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    font-weight: var(--font-weight-semi-bold);
+    color: white;
+    text-decoration: none;
+  }
 `;
 
 const LinkText = styled.p`
-  font-size: 4.8rem;
+  text-decoration: none;
+  font-size: var(--font-size-xxl);
 
-  @media (max-width: 51em) and (orientation: landscape) {
-    font-size: 3.6rem;
-  }
-
-  @media (orientation: portrait) {
-    font-size: 4.8rem;
+  @media (orientation: portrait) and (max-width: 34.5em) {
+    font-size: var(--font-size-xl);
   }
 `;
 
 const Arrow = styled(ArrowRightIcon)`
   color: white;
-  height: 9.6rem;
+  height: var(--font-size-xxxl);
   margin-left: 1rem;
+  height: 6.4rem;
 
   @media (max-width: 51em) and (orientation: landscape) {
-    height: 6.4rem;
+    height: 6rem;
   }
 
   @media (orientation: portrait) {
-    height: 6.4rem;
+    height: 4rem;
   }
 `;
 
@@ -182,7 +178,7 @@ const DigitalizationSection = ({
   return (
     <Container>
       <Content>
-        <h2>A Digitalized World</h2>
+        <h1>A Digitalized World</h1>
         <AppGrid>
           {apps.map((app, index) => (
             <GridItem key={index}>
@@ -202,12 +198,10 @@ const DigitalizationSection = ({
           ))}
         </AppGrid>
         <StyledLink>
-          <Link to="/Digitalization">
-            <ProjectLink>
-              <LinkText>Learn more</LinkText>
-              <Arrow />
-            </ProjectLink>
-          </Link>
+          <ProjectLink to="/digitalization">
+            <LinkText>Read more</LinkText>
+            <Arrow />
+          </ProjectLink>
         </StyledLink>
       </Content>
     </Container>

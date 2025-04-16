@@ -9,24 +9,19 @@ const Container = styled.div`
 const Content = styled.div`
   width: 70vw;
   margin: 0 auto;
-  & > h2 {
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-semi-bold);
-  }
 
   & > p {
-    padding-top: var(--space-l);
+    padding-top: var(--space-md);
     padding-bottom: var(--space-xl);
-    font-size: var(--font-size-lg);
   }
 
-  @media (max-width: 25em) {
-    width: 80vw;
+  @media (max-width: 576px) {
+    width: 85vw;
   }
 `;
 
 const BackgroundTitle = styled.h2`
-  padding-top: 12.8rem;
+  padding-top: var(--space-xxxl);
 
   @media (max-width: 84em) {
     padding-top: 0rem;
@@ -44,6 +39,7 @@ const Divider = styled.div`
 
 const CopyRightText = styled.p`
   text-align: right;
+  font-weight: var(--font-weight-semi-bold);
   font-size: var(--font-size-base);
 `;
 

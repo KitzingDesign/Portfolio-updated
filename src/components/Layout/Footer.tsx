@@ -2,16 +2,14 @@ import { useState, useEffect } from "react";
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
-  const [currentYear] = useState(new Date().getFullYear());
-
   return (
     <footer className={styles.footer}>
-      <div className={styles.year}>{currentYear}</div>
+      <div className={styles.year}></div>
 
       <div className={styles.cta}>
-        <h3 className={styles.ctaText}>HAVE A PROJECT IN MIND?</h3>
+        <h3 className={styles.ctaText}>Want to know more about me?</h3>
         <a href="mailto:Jakob.Kitzing@gmail.com" className={styles.ctaButton}>
-          LET'S TALK
+          LET'S CONNECT
         </a>
       </div>
 
@@ -25,6 +23,14 @@ const Footer = () => {
           GITHUB
         </a>
         <a
+          href="https://twitter.com/yourhandle"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.socialLink}
+        >
+          MATMATMATEN
+        </a>
+        <a
           href="https://linkedin.com/in/jakob-kitzing"
           target="_blank"
           rel="noopener noreferrer"
@@ -32,18 +38,10 @@ const Footer = () => {
         >
           LINKEDIN
         </a>
-        <a
-          href="https://twitter.com/yourhandle"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.socialLink}
-        >
-          TWITTER
-        </a>
       </div>
 
       <div className={styles.credits}>
-        <p>Design & Development by Jakob Kitzing</p>
+        <p>© 2025 Jakob Kitzing</p>
       </div>
     </footer>
   );

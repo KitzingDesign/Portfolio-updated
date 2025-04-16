@@ -11,26 +11,14 @@ const Content = styled.div`
   width: 70vw;
   margin: 0 auto;
 
-  & > h2 {
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-semi-bold);
-  }
-
   & > p {
-    font-size: var(--font-size-lg);
-    padding-top: var(--space-l);
-    padding-bottom: var(--space-xxl);
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-xl);
   }
 
   @media (max-width: 1200px) {
     width: 90vw;
     padding-top: var(--space-xxl);
-    & > h2 {
-      font-size: var(--font-size-xxxl);
-    }
-    & > p {
-      font-size: var(--font-size-lg);
-    }
   }
 
   @media (max-width: 576px) {
@@ -46,7 +34,7 @@ const Content = styled.div`
 `;
 
 const BackgroundTitle = styled.h2`
-  padding-top: 12.8rem;
+  padding-top: var(--space-xxxl);
 
   @media (max-width: 84em) {
     padding-top: 0rem;

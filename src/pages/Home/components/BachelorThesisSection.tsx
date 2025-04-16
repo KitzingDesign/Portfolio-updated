@@ -12,7 +12,7 @@ const Container = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: var(--space-xl);
 
   @media (orientation: portrait) {
     flex-direction: column;
@@ -22,22 +22,13 @@ const Container = styled.div`
 
   @media (orientation: portrait) and (max-width: 34.5em) {
     max-height: -webkit-fill-available;
-    max-width: 80vw;
+    max-width: 85vw;
     gap: 1rem;
   }
 `;
 
 const TextContainer = styled.div`
   width: 100%;
-
-  & > h2 {
-    font-size: var(--font-size-xxxl);
-  }
-
-  & > p {
-    margin: 2.4rem 0;
-    font-size: var(--font-size-lg);
-  }
 
   @media (orientation: portrait) {
     width: 100%;
@@ -64,6 +55,11 @@ const ThesisImg = styled.img`
   object-fit: contain;
 `;
 
+const Text = styled.p`
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xl);
+`;
+
 const BachelorThesisSection: React.FC<BachelorThesisSectionProps> = ({
   fade,
 }) => {
@@ -81,15 +77,15 @@ const BachelorThesisSection: React.FC<BachelorThesisSectionProps> = ({
 
       <div>
         <TextContainer>
-          <h2>Bachelor&apos;s Thesis</h2>
-          <p>
+          <h1>Bachelor&apos;s Thesis</h1>
+          <Text>
             As a bachelor thesis project, my group&apos;s mission was, together
             with the design company Boid, to develop the control room of the
             future for the alloy plant Vagrön Alloys. Our role in the project
             was to create a new workspace for the person overseeing the
             furnaces.
-          </p>
-          <StyledLink to="bachelorThesis">Read about the project</StyledLink>
+          </Text>
+          <StyledLink to="bachelorThesis">Read more</StyledLink>
         </TextContainer>
       </div>
     </Container>

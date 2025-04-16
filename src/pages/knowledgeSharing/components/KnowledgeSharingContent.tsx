@@ -88,7 +88,6 @@ const KnowledgeContent = () => {
                   alt="View of first find people page"
                   className={styles.carouselImage}
                 />
-                <p className={styles.descriptionImg}>First find people page</p>
               </div>
             </SplideSlide>
 

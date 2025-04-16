@@ -18,14 +18,12 @@ const Container = styled.div`
   }
 `;
 
-const Text = styled.div`
+const Text = styled.h2`
   color: white;
-  font-size: 4.8rem;
   text-align: left;
   margin-bottom: 1.2rem;
 
   @media (max-width: 51em) {
-    font-size: 3.6rem;
     margin-bottom: 0rem;
   }
 `;

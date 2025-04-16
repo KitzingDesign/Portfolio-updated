@@ -20,19 +20,15 @@ const Container = styled.div`
     height: 100vh;
   }
 
-  @media (orientation: portrait) and (max-width: 34.5em) {
+  @media (orientation: portrait) and (max-width: 576px) {
     max-height: -webkit-fill-available;
-    max-width: 80vw;
-    gap: 1rem;
+    max-width: 85vw;
+    gap: var(--space-md);
   }
 `;
 
 const TextContainer = styled.div`
   width: 100%;
-
-  & > h2 {
-    font-size: var(--font-size-xxxl);
-  }
 
   @media (orientation: portrait) {
     width: 100%;
@@ -46,14 +42,14 @@ const ImgContainer = styled.div`
     width: 65vw;
   }
 
-  @media (orientation: portrait) and (max-width: 34.5em) {
+  @media (orientation: portrait) and (max-width: 576px) {
     width: 80vw;
   }
 `;
 
 const Text = styled.p`
-  margin: 2.4rem 0;
-  font-size: var(--font-size-lg);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xxl);
 `;
 
 const ConceptImg = styled.img`
