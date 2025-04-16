@@ -3,7 +3,6 @@ import styles from "./digiHeader.module.css";
 
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Swiper as SwiperType } from "swiper/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -17,7 +16,6 @@ import {
 } from "@heroicons/react/24/outline";
 
 import styled from "@emotion/styled";
-import { keyframes } from "@emotion/react";
 
 import phoneImg from "@/assets/images/digitalization/phone.png";
 import img3 from "@/assets/images/digitalization/KryStorJury.webp";
