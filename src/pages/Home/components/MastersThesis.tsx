@@ -1,6 +1,6 @@
 // src/components/MasterThesisSection.tsx
 import styled from "@emotion/styled";
-import StyledLink from "@components/ui/Link";
+import StyledLink from "@/components/ui/Link";
 import conceptImg from "@/assets/images/home/ThesisImg.png"; // Adjust the path as necessary
 
 interface MasterThesisSectionProps {
@@ -62,7 +62,7 @@ const Text = styled.p`
   margin-bottom: var(--space-xxl);
 `;
 
-const MasterThesisSection: React.FC<MasterThesisSectionProps> = ({ fade }) => {
+const MasterThesisSection: React.FC<MasterThesisSectionProps> = () => {
   return (
     <Container>
       <div>

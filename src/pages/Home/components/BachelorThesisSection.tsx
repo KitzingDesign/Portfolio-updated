@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import thesisImg from "@/assets/images/home/BachelorThesisMockup.png"; // Adjust path as needed
-import StyledLink from "@components/ui/Link";
+import StyledLink from "@/components/ui/Link";
 
 interface BachelorThesisSectionProps {
   fade?: boolean;
@@ -60,9 +60,7 @@ const Text = styled.p`
   margin-bottom: var(--space-xl);
 `;
 
-const BachelorThesisSection: React.FC<BachelorThesisSectionProps> = ({
-  fade,
-}) => {
+const BachelorThesisSection: React.FC<BachelorThesisSectionProps> = ({}) => {
   return (
     <Container>
       <div>

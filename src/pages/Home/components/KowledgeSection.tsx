@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import conceptImg from "@/assets/images/home/KnowledgeSharingMockup.webp"; // Adjust path as needed
-import StyledLink from "@components/ui/Link";
+import StyledLink from "@/components/ui/Link";
 
 interface KnowledgeSectionProps {
   fade?: boolean;
@@ -58,7 +58,7 @@ const ConceptImg = styled.img`
   object-fit: contain;
 `;
 
-const KnowledgeSection: React.FC<KnowledgeSectionProps> = ({ fade }) => {
+const KnowledgeSection: React.FC<KnowledgeSectionProps> = () => {
   return (
     <Container>
       <div>

@@ -16,13 +16,6 @@ interface DigitalizationSectionProps {
   fade?: boolean;
 }
 
-interface AppIconProps {
-  url: string;
-  header: string;
-  alt: string;
-  id?: string;
-}
-
 const Container = styled.div`
   height: 100vh;
   background-color: black;
