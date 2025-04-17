@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { useEffect } from "react";
 
 const Container = styled.div`
   max-width: 100vw;

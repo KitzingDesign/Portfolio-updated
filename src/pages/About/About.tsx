@@ -1,9 +1,8 @@
-"use client";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 import styles from "./About.module.scss";
 import WorkExperience from "./components/WorkExperience";
-import HeroImg from "@/assets/images/about/actionFigure.png";
+import HeroImg from "@/assets/images/about/aboutImg.jpg";
 import Footer from "../../components/Layout/Footer";
 import Contacts from "./components/Contacts";
 
@@ -145,7 +144,7 @@ const AboutPage = () => {
           <div className={styles.textSection}>
             <motion.div
               className={styles.coverBox}
-              initial={{ width: "45%" }}
+              initial={{ width: "var(--initial-width-1)" }}
               animate={firstCoverControls}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             />
@@ -172,7 +171,7 @@ const AboutPage = () => {
           <div className={styles.textSection}>
             <motion.div
               className={styles.coverBox}
-              initial={{ width: "65%" }}
+              initial={{ width: "var(--initial-width-2)" }}
               animate={secondCoverControls}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             />
@@ -185,15 +184,15 @@ const AboutPage = () => {
             >
               <WorkExperience
                 company="Master's Thesis - Kognic"
-                time="January 2024 - June 2024"
+                time="Jan 2024 - Jun 2024"
               />
               <WorkExperience
                 company="UX Designer - Kognic"
-                time="June 2023 - July 2023"
+                time="Jun 2023 - Jul 2023"
               />
               <WorkExperience
                 company="Photoshop Instructor - Chalmers University of Technology"
-                time="August 2019 & August 2020"
+                time="Aug 2019 & Aug 2020"
               />
               <WorkExperience
                 company="Driver - Västra Götalandsregionen"
@@ -206,7 +205,7 @@ const AboutPage = () => {
           <div className={styles.textSection}>
             <motion.div
               className={styles.coverBox}
-              initial={{ width: "35%" }}
+              initial={{ width: "var(--initial-width-3)" }}
               animate={thirdCoverControls}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             />
@@ -219,15 +218,15 @@ const AboutPage = () => {
             >
               <WorkExperience
                 company="M.Sc. Interaction Design and Technologies - Chalmers University of Technology"
-                time="2022 - 2024"
+                time="Aug 2022 - Jun 2024"
               />
               <WorkExperience
                 company="Exchange Studies, Computer Science - Instituto Superior Técnico, Lisbon"
-                time="August 2023 - January 2023"
+                time="Aug 2023 - Jan 2024"
               />
               <WorkExperience
                 company="B.Sc. Industrial Design Engineering - Chalmers University of Technology"
-                time="2018 - 2021"
+                time="Aug 2018 - Jun 2021"
               />
             </motion.div>
           </div>

@@ -12,6 +12,7 @@ $colors: (
   dark: #212529,
   text: #333333,
   gray: #6c757d,
+  light-gray: #5555,
   success: #4bb543,
   danger: #dc3545,
   warning: #ffc107,
@@ -51,7 +52,7 @@ $line-height: (
   // Default for body text
   relaxed: 1.625,
   // For longer reading content
-  loose: 1.75 // For very large text or special cases,,
+  loose: 1.75 // For very large text or special cases,,,,,,,
 );
 
 $font-weights: (

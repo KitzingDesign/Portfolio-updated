@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet";
 import Header from "./components/header/Header";
 import Background from "./components/background/Backgound";
 import Problem from "./components/problem/Problem";
+import Solution from "./components/solution/Solution";
+import Melter from "./components/melter/Melter";
+import Concept from "./components/concept/Concept";
 
 const KandidatarbetePage = () => {
   return (
@@ -15,11 +18,10 @@ const KandidatarbetePage = () => {
       <Header />
       <Background />
       <Problem />
-      {/* <KandidatarbeteBakgrund />
-      <KandidatarbeteProblem />
-      <KandidatarbeteKoncept />
-      <KandidatarbeteSmalter />
-      <KandidatarbeteSlutkocept /> */}
+      <Concept />
+      <Melter />
+      <Solution />
+
       <Footer />
     </div>
   );

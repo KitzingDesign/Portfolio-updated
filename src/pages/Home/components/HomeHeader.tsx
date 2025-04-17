@@ -66,7 +66,7 @@ const HeaderImg = styled.div`
   width: 80%;
 `;
 
-const HomeHeader: React.FC<HomeHeaderProps> = () => {
+const HomeHeader = (): HomeHeaderProps => {
   return (
     <Container>
       <HeaderElement>

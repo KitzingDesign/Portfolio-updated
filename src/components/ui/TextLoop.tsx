@@ -1,5 +1,5 @@
 import React from "react";
-import ReactRotatingText from "react-rotating-text";
+import { Typewriter } from "react-simple-typewriter";
 
 // Define type for props if needed
 interface TextLoopProps {
@@ -20,11 +20,14 @@ const TextLoop: React.FC<TextLoopProps> = ({
 }) => {
   return (
     <h1 className="rotating-text">
-      <ReactRotatingText
-        typingInterval={typingInterval}
-        items={items}
-        emptyPause={1000}
-        deletingInterval={30}
+      <Typewriter
+        words={items}
+        loop={false}
+        cursor
+        cursorStyle="|"
+        typeSpeed={typingInterval}
+        deleteSpeed={typingInterval}
+        delaySpeed={2000}
       />
     </h1>
   );

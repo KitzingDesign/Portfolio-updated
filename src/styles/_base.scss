@@ -75,6 +75,13 @@ h2 {
 }
 h3 {
   font-size: map.get($font-sizes, lg);
+
+  @media screen and (max-width: map.get($breakpoints, md)) {
+    font-size: map.get($font-sizes, md);
+  }
+  @media screen and (max-width: map.get($breakpoints, sm)) {
+    font-size: map.get($font-sizes, base);
+  }
 }
 h4 {
   font-size: map.get($font-sizes, md);
@@ -97,7 +104,7 @@ a {
 
   &:hover {
     color: darken(map.get($colors, primary), 10%);
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 

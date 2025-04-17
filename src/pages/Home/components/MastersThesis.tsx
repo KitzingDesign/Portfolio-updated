@@ -1,7 +1,7 @@
 // src/components/MasterThesisSection.tsx
 import styled from "@emotion/styled";
 import StyledLink from "@/components/ui/Link";
-import conceptImg from "@/assets/images/home/ThesisImg.png"; // Adjust the path as necessary
+import conceptImg from "@/assets/images/home/ThesisImage.png";
 
 interface MasterThesisSectionProps {
   fade?: boolean;

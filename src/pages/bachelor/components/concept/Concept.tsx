@@ -1,5 +1,10 @@
 // import Koncept from "../UI/koncept";
-import styles from "./kandidatarbeteKoncept.module.scss";
+import ConceptPart from "./ConceptPart";
+import styles from "./Concept.module.scss";
+
+import conceptA from "@/assets/images/bachelor/concepts/ConceptA.jpg";
+import conceptB from "@/assets/images/bachelor/concepts/ConceptB.jpg";
+import conceptC from "@/assets/images/bachelor/concepts/ConceptC.jpg";
 
 const Concept = () => {
   return (
@@ -16,9 +21,9 @@ const Concept = () => {
         viewed below
       </p>
       <div className={styles.koncepts} data-aos="fade-up">
-        {/* <Koncept titel="Concept A" img="/Kandidat/KonceptA.jpg" />
-        <Koncept titel="Concept B" img="/Kandidat/KonceptB.jpg" />
-        <Koncept titel="Concept C" img="/Kandidat/KonceptC.webp" /> */}
+        <ConceptPart title="Concept A" img={conceptA} />
+        <ConceptPart title="Concept B" img={conceptB} />
+        <ConceptPart title="Concept C" img={conceptC} />
       </div>
     </div>
   );

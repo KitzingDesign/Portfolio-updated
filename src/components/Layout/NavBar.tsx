@@ -68,7 +68,7 @@ const NavBar = () => {
           <ul>
             <li>
               <NavLink
-                to="/"
+                to="/#home"
                 className={({ isActive }) =>
                   `${styles.link} ${isActive ? styles.activeLink : ""}`
                 }

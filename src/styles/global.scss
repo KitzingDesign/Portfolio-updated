@@ -16,6 +16,7 @@
   --color-dark: #{map.get($colors, dark)};
   --color-text: #{map.get($colors, text)};
   --color-gray: #{map.get($colors, gray)};
+  --color-light-gray: #{map.get($colors, light-gray)};
   --color-success: #{map.get($colors, success)};
   --color-danger: #{map.get($colors, danger)};
   --color-warning: #{map.get($colors, warning)};

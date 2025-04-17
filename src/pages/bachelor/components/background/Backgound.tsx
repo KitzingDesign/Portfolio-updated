@@ -1,5 +1,11 @@
 import styles from "./Background.module.scss";
 
+// svgs
+import chalmerSvg from "@/assets/images/bachelor/svgs/Chalmers.svg";
+import boidSvg from "@/assets/images/bachelor/svgs/Boid.svg";
+import guardSvg from "@/assets/images/bachelor/svgs/Guard.svg";
+import vargonSvg from "@/assets/images/bachelor/svgs/Vargön.svg";
+
 const Background = () => {
   return (
     <div className={styles.container}>
@@ -38,31 +44,23 @@ const Background = () => {
         <div className={styles.flexImg}>
           <div className={styles.imgContainer}>
             <img
-              src="/Kandidat/Chalmers.svg"
+              src={chalmerSvg}
               alt="Chalmers logo"
               className={styles.logoImage}
             />
           </div>
           <div className={styles.imgContainer}>
-            <img
-              src="/Kandidat/Boid.svg"
-              alt="Boid logo"
-              className={styles.logoImage}
-            />
+            <img src={boidSvg} alt="Boid logo" className={styles.logoImage} />
           </div>
           <div className={styles.imgContainer}>
             <img
-              src="/Kandidat/Vargön.svg"
+              src={vargonSvg}
               alt="Vargön Alloys logo"
               className={styles.logoImage}
             />
           </div>
           <div className={styles.imgContainer}>
-            <img
-              src="/Kandidat/Guard.svg"
-              alt="Guard logo"
-              className={styles.logoImage}
-            />
+            <img src={guardSvg} alt="Guard logo" className={styles.logoImage} />
           </div>
         </div>
       </div>

@@ -24,8 +24,10 @@
     "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.5.0",
+    "react-medium-image-zoom": "^5.2.14",
     "react-rotating-text": "^1.4.1",
     "react-router-dom": "^7.5.0",
+    "react-simple-typewriter": "^5.0.1",
     "sass": "^1.86.3",
     "swiper": "^11.2.6"
   },

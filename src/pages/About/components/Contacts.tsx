@@ -14,19 +14,19 @@ const Contacts: React.FC = () => {
         </a>
 
         <a
-          href="https://linkedin.com/in/your-profile"
+          href="https://www.linkedin.com/in/jakob-kitzing-27b4991b7/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          aria-label="LinkedIn Profile"
         >
           <FaLinkedin className={`${styles.icon} ${styles.linkedin}`} />
         </a>
 
         <a
-          href="https://github.com/your-username"
+          href="https://github.com/KitzingDesign"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub"
+          aria-label="GitHub Account"
         >
           <FaGithub className={styles.icon} />
         </a>

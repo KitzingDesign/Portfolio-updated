@@ -2,29 +2,23 @@
   background-color: var(--color-light);
   color: var(--color-dark);
   margin-top: var(--space-xxl);
-  padding: 4rem 2rem;
+  padding: var(--space-xxl) var(--space-lg);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  border-top: 1px solid var(--color-text);
-}
-
-.year {
-  font-size: var(--font-size-xl);
-  opacity: 0.5;
+  gap: var(--space-xl);
+  border-top: 1px solid var(--color-light-gray);
 }
 
 .cta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: var(--space-xl);
 }
 
 .ctaText {
-  font-size: var(--font-size-lg);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: var(--font-weight-medium);
@@ -45,13 +39,15 @@
   &:hover {
     background-color: var(--color-light);
     color: var(--color-dark);
+    text-decoration: none;
+    scale: 1.1;
   }
 }
 
 .socials {
   display: flex;
-  gap: 2rem;
-  margin-top: 1rem;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
 }
 
 .socialLink {
@@ -61,7 +57,10 @@
   letter-spacing: 0.1em;
   font-size: var(--font-size-sm);
   position: relative;
-  padding-bottom: 0.3rem;
+
+  a {
+    text-decoration: none;
+  }
 
   &::after {
     content: "";
@@ -80,7 +79,7 @@
 }
 
 .credits {
-  margin-top: 3rem;
+  margin-top: var(--space-md);
   font-size: var(--font-size-xs);
   opacity: 0.6;
 }
@@ -88,7 +87,7 @@
 // Responsive adjustments
 @media screen and (max-width: 1200px) {
   .footer {
-    padding: 3rem 1.5rem;
+    padding: 4rem 1.5rem;
     gap: 2rem;
   }
 

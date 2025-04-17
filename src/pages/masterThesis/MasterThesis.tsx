@@ -8,6 +8,8 @@ import PhaseTwo from "./components/phaseTwo/PhaseTwo";
 import ResearchQuestion from "./components/researchQuestion/ResearchQuestion";
 import PhaseThree from "./components/phaseThree/PhaseThree";
 import SolutionSection from "./components/finalSolution/SolutionSection";
+import MasterThesisBackground from "./components/MasterThesisBackground";
+import DesignGuidelines from "./components/designGuidelines/DesignGuidelines";
 
 interface MasterThesisPageProps {
   // Add any props you need here
@@ -26,7 +28,7 @@ const MasterThesisPage: React.FC<MasterThesisPageProps> = () => {
       </Helmet>
 
       <MasterThesisHeader />
-      {/* <MasterThesisBackground /> */}
+      <MasterThesisBackground />
       <ResearchQuestion />
       <MicroAdjustments />
       <TripleDiamond />
@@ -35,8 +37,8 @@ const MasterThesisPage: React.FC<MasterThesisPageProps> = () => {
       <PhaseThree />
 
       <SolutionSection />
-      {/*
-      <DesignGuidelines /> */}
+
+      <DesignGuidelines />
       <Footer />
     </>
   );

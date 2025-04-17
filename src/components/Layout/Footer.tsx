@@ -3,8 +3,6 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.year}></div>
-
       <div className={styles.cta}>
         <h3 className={styles.ctaText}>Want to know more about me?</h3>
         <a href="mailto:Jakob.Kitzing@gmail.com" className={styles.ctaButton}>
