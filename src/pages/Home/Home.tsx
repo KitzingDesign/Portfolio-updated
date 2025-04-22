@@ -1,28 +1,47 @@
-// src/pages/Home/Home.tsx
-
 import HomeHeader from "./components/HomeHeader";
-
 import ReactFullpage from "@fullpage/react-fullpage";
 import MasterThesisSection from "./components/MastersThesis";
 import KnowledgeSection from "./components/KowledgeSection";
 import EmotionSection from "./components/EmotionSection";
 import DigitalizationSection from "./components/DigitalizationSection";
 import BachelorThesisSection from "./components/BachelorThesisSection";
+import { Helmet } from "react-helmet";
 
 // FullPage.js
 const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY;
 
+// Section titles mapping
+const SECTION_TITLES = {
+  home: "Home",
+  thesis: "Master's Thesis",
+  knowledge: "Knowledge Platform",
+  calmifly: "Emotion Design",
+  digitalization: "Digitalization",
+  bachelorThesis: "Bachelor Thesis",
+};
+
 const HomePage = () => {
+  const handleSectionLeave = (destination: any) => {
+    const sectionName =
+      SECTION_TITLES[destination.anchor as keyof typeof SECTION_TITLES];
+    document.title = `${sectionName} | Jakob Kitzing`;
+  };
+
   return (
     <>
+      {/* Single Helmet at the root level */}
+      <Helmet>
+        <title>Projects | Jakob Kitzing</title>
+      </Helmet>
+
       <ReactFullpage
         scrollingSpeed={800}
         navigation={true}
         licenseKey={fullPageToken}
         credits={{
-          enabled: false, // Disable default credits
-          label: "", // Empty label
-          position: "right", // Position doesn't matter since it's disabled
+          enabled: false,
+          label: "",
+          position: "right",
         }}
         anchors={[
           "home",
@@ -32,6 +51,7 @@ const HomePage = () => {
           "digitalization",
           "bachelorThesis",
         ]}
+        onLeave={handleSectionLeave}
         render={() => {
           return (
             <ReactFullpage.Wrapper>
@@ -57,7 +77,6 @@ const HomePage = () => {
           );
         }}
       />
-      ;
     </>
   );
 };

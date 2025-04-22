@@ -32,7 +32,7 @@ const SolutionSection = ({
 
       <div className={styles.flex}>
         <div className={styles.imgContainer}>
-          <KandRender url={urlFirst} alt={alt} />
+          <KandRender url={urlFirst} altText={alt} />
         </div>
         <div className={styles.smutsAbove}>
           <div>
@@ -47,7 +47,7 @@ const SolutionSection = ({
           </div>
         </div>
         <div className={styles.imgContainer}>
-          <KandRender url={urlSecond} alt={alt} />
+          <KandRender url={urlSecond} altText={alt} />
         </div>
       </div>
     </div>

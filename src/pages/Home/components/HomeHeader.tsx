@@ -5,11 +5,6 @@ import styled from "@emotion/styled";
 
 import profilePicture from "@/assets/images/home/Startbild.svg"; // Adjust the path as necessary
 
-// TypeScript interface for props (if needed)
-interface HomeHeaderProps {
-  // Add any props you might need in the future
-}
-
 const Container = styled.div`
   height: 100vh;
   width: 80vw;
@@ -66,7 +61,7 @@ const HeaderImg = styled.div`
   width: 80%;
 `;
 
-const HomeHeader = (): HomeHeaderProps => {
+const HomeHeader = () => {
   return (
     <Container>
       <HeaderElement>

@@ -3,7 +3,7 @@ import styles from "./DigitalizationSection.module.scss";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import styled from "@emotion/styled";
-import AppItem from "@/components/ui/AppItem"; // Renamed import to match component
+import AppItem from "@/components/ui/AppItem";
 
 // Import SVGs correctly
 import EldlerLogo from "@/assets/images/home/digitalization/eldlerLogo.svg";

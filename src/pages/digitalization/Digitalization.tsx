@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../../components/Layout/Footer";
 import DigiContent from "./components/DigiContent";

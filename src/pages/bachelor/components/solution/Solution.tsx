@@ -43,7 +43,7 @@ const Solution = () => {
           </div>
         </div>
         <SolutionOne
-          titel="Dirt handling"
+          title="Dirt handling"
           divider="dividerR"
           urlFirst={aboveImg}
           firstTitel="Layout"
@@ -54,7 +54,7 @@ const Solution = () => {
           alt="Smutshantering"
         />
         <SolutionOne
-          titel="Proximity to the Furnace"
+          title="Proximity to the Furnace"
           divider="dividerL"
           urlFirst={screensImg}
           firstTitel="Visual Representation"
@@ -76,7 +76,7 @@ const Solution = () => {
           alt="Kommunikation"
         />
         <SolutionOne
-          titel="Alarm and Safety"
+          title="Alarm and Safety"
           divider="dividerL"
           urlFirst={speakerImg}
           firstTitel="Visually"

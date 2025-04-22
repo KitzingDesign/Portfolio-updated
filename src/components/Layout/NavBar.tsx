@@ -33,7 +33,7 @@ const NavBar = () => {
   return (
     <nav className={scrolled ? styles.sticky : styles.unSticky}>
       <div className={styles.container}>
-        <a href="/">
+        <NavLink to="/#home">
           <div
             className={
               menu
@@ -57,7 +57,7 @@ const NavBar = () => {
               />
             </svg>
           </div>
-        </a>
+        </NavLink>
         <nav
           className={
             menu

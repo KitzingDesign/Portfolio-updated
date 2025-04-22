@@ -1,7 +1,5 @@
 import styles from "./Melter.module.scss";
 
-import melterGif from "@/assets/images/bachelor/MelterGif.gif"; // Adjust the path as necessary
-
 const Melter = () => {
   return (
     <div className={styles.container}>

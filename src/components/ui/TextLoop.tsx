@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 // Define type for props if needed
 interface TextLoopProps {
   typingInterval?: number;
-  items: string[];
+  items?: string[];
 }
 
 const TextLoop: React.FC<TextLoopProps> = ({

@@ -52,7 +52,7 @@ $line-height: (
   // Default for body text
   relaxed: 1.625,
   // For longer reading content
-  loose: 1.75 // For very large text or special cases,,,,,,,
+  loose: 1.75 // For very large text or special cases,,,,,,,,
 );
 
 $font-weights: (
@@ -82,6 +82,7 @@ $breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
+  xxxl: 2000px,
 );
 
 // Border

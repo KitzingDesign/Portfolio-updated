@@ -3,10 +3,10 @@ import "react-medium-image-zoom/dist/styles.css";
 
 interface KandRenderProps {
   url: string;
-  alt: string;
+  altText?: string;
 }
 
-const KandRender = ({ url, alt }: KandRenderProps) => {
+const KandRender = ({ url, altText }: KandRenderProps) => {
   return (
     <Zoom>
       <div
@@ -22,7 +22,7 @@ const KandRender = ({ url, alt }: KandRenderProps) => {
           width="100%"
           height="66%"
           src={url}
-          alt={alt}
+          alt={altText}
           style={{
             border: "white solid 2rem",
             boxShadow:
