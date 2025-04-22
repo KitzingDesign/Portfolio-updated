@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"), // Remove the '/*' from the alias
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   css: {
@@ -16,13 +16,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "src/styles/variables" as *;
-        `, // Use explicit path instead of alias
+          @use "./src/styles/variables" as *;
+        `,
       },
     },
-  },
-  build: {
-    minify: "terser",
-    chunkSizeWarningLimit: 1000,
   },
 });
