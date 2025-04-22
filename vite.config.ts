@@ -2,29 +2,27 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@/*": path.resolve(__dirname, "./src/*"), // Maps `@/` to `src/`
+      "@": path.resolve(__dirname, "./src"), // Remove the '/*' from the alias
     },
   },
   css: {
     modules: {
-      localsConvention: "camelCase", // Converts SCSS class `btn-primary` to `btnPrimary` in JS
+      localsConvention: "camelCase",
     },
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "@/styles/variables" as *;
-        `, // Globally injects SCSS variables/mixins
+          @use "src/styles/variables" as *;
+        `, // Use explicit path instead of alias
       },
     },
   },
-  // Optional optimizations:
   build: {
-    minify: "terser", // Smaller bundle size
-    chunkSizeWarningLimit: 1000, // Adjust chunk size warning (in kB)
+    minify: "terser",
+    chunkSizeWarningLimit: 1000,
   },
 });
