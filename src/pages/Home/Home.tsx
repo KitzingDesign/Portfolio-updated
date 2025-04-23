@@ -37,7 +37,6 @@ const HomePage = () => {
       <ReactFullpage
         scrollingSpeed={800}
         navigation={true}
-        licenseKey={fullPageToken}
         credits={{
           enabled: false,
         }}
