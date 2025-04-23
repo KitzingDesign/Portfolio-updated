@@ -10,6 +10,7 @@ import PhaseThree from "./components/phaseThree/PhaseThree";
 import SolutionSection from "./components/finalSolution/SolutionSection";
 import MasterThesisBackground from "./components/MasterThesisBackground";
 import DesignGuidelines from "./components/designGuidelines/DesignGuidelines";
+import ScrollToTop from "@/ScrollToTop";
 
 interface MasterThesisPageProps {
   // Add any props you need here
@@ -18,6 +19,7 @@ interface MasterThesisPageProps {
 const MasterThesisPage: React.FC<MasterThesisPageProps> = () => {
   return (
     <>
+      <ScrollToTop />
       <Helmet>
         <title>Master's Thesis</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
