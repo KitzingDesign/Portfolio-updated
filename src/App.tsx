@@ -30,6 +30,7 @@ const App = () => {
 
   return (
     <>
+      <ScrollRestoration />
       <NavBar />
       <main>
         <AnimatePresence mode="wait" initial={false}>
@@ -40,7 +41,6 @@ const App = () => {
             variants={pageVariants}
             transition={pageTransition}
           >
-            <ScrollRestoration />
             <Outlet />
           </motion.div>
         </AnimatePresence>
