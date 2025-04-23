@@ -6,7 +6,7 @@ import styled from "@emotion/styled";
 import profilePicture from "@/assets/images/home/Startbild.svg"; // Adjust the path as necessary
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100dvh;
   width: 80vw;
   margin: 0 auto;
   display: flex;
@@ -15,11 +15,11 @@ const Container = styled.div`
   @media (orientation: portrait) {
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    height: 100dvh;
   }
 
   @media (orientation: portrait) and (max-width: 576px) {
-    height: 100vh;
+    height: 100dvh;
     width: 85vw;
     max-height: -webkit-fill-available;
   }
@@ -27,7 +27,7 @@ const Container = styled.div`
 
 const HeaderElement = styled.div`
   display: flex;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   align-items: center;
   justify-content: center;
