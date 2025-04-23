@@ -30,7 +30,6 @@ const App = () => {
 
   return (
     <>
-      <ScrollRestoration />
       <NavBar />
       <main>
         <AnimatePresence mode="wait" initial={false}>
@@ -44,6 +43,7 @@ const App = () => {
             <Outlet />
           </motion.div>
         </AnimatePresence>
+        <ScrollRestoration />
       </main>
       {matPopup && (
         <ToastModal
