@@ -30,9 +30,10 @@ const App = () => {
 
   return (
     <>
-      <ScrollRestoration />
       <NavBar />
       <main>
+        <ScrollRestoration />
+
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={location.pathname}
