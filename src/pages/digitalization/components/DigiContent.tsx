@@ -1,5 +1,5 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/react-splide/dist/css/splide.min.css";
+import "@splidejs/splide/dist/css/splide.min.css";
 import styles from "./Digicontent.module.scss";
 
 //images

@@ -1,8 +1,8 @@
 @use "sass:color";
 @use "sass:map";
-@use "@styles/variables" as *;
-@use "@styles/mixins";
-@use "@styles/base";
+@use "./variables" as *;
+@use "mixins";
+@use "base";
 
 @forward "mixins";
 @forward "variables";

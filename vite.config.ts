@@ -7,7 +7,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@styles": path.resolve(__dirname, "src/styles"),
     },
   },
   css: {
@@ -17,9 +16,13 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-          @use "./src/styles/variables" as *;
-        `,
+        @use "@/styles/variables" as *;
+      `,
       },
     },
+  },
+  build: {
+    minify: "terser",
+    chunkSizeWarningLimit: 1000,
   },
 });
