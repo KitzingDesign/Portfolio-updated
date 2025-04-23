@@ -2,7 +2,7 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import styles from "./DigiContent.module.scss";
 
-//images
+//image
 import FirstImage from "@/assets/images/digitalization/EldlerStorLogo.webp";
 import SecondImage from "@/assets/images/digitalization/ElyStorLogo.webp";
 import ThirdImage from "@/assets/images/digitalization/JuryArm.png";
