@@ -12,11 +12,17 @@ import KnowledgeSharingPage from "./pages/knowledgeSharing/KnowledgeSharing.tsx"
 import DigitalizationPage from "./pages/digitalization/Digitalization.tsx";
 import MasterThesisPage from "./pages/masterThesis/MasterThesis.tsx";
 import BachelorPage from "./pages/bachelor/BachelorPage.tsx";
+import ScrollToTop from "./ScrollToTop.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <>
+        <ScrollToTop />
+        <App />
+      </>
+    ),
     children: [
       { index: true, element: <HomePage /> },
       { path: "/about", element: <About /> },
