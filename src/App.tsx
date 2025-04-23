@@ -32,8 +32,6 @@ const App = () => {
     <>
       <NavBar />
       <main>
-        <ScrollRestoration />
-
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={location.pathname}
@@ -42,6 +40,7 @@ const App = () => {
             variants={pageVariants}
             transition={pageTransition}
           >
+            <ScrollRestoration />
             <Outlet />
           </motion.div>
         </AnimatePresence>
