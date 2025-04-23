@@ -46,11 +46,13 @@
 .img {
   width: 3.4rem;
 
-  &:hover {
-    cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
 
-    path {
-      fill: var(--color-primary);
+      path {
+        fill: var(--color-primary);
+      }
     }
   }
 }
