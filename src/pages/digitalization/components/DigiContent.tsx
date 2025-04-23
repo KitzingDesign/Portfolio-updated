@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import styles from "./Digicontent.module.scss";
+import styles from "./DigiContent.module.scss";
 
 //images
 import FirstImage from "@/assets/images/digitalization/EldlerStorLogo.webp";
