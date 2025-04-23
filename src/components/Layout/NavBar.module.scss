@@ -59,15 +59,13 @@
   position: relative;
   box-sizing: border-box;
   font-size: var(--font-size-xl);
-  text-decoration: none !important; // Force remove any default underline
+  text-decoration: none;
   display: inline-block;
   padding-bottom: 2px;
   color: var(--color-text);
 
-  // Remove all default link styles
   &:link,
-  &:visited,
-  &:active {
+  &:visited {
     border: none;
     background-color: transparent;
     outline: none;

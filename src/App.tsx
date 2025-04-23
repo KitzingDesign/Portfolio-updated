@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import "@/styles/global.scss";
 import NavBar from "./components/Layout/NavBar";
 import ToastModal from "./components/Layout/ToastModal";
-import Layout from "./components/Layout/Layout";
 
 const pageVariants = {
   initial: {
@@ -41,9 +40,7 @@ const App = () => {
             variants={pageVariants}
             transition={pageTransition}
           >
-            <Layout>
-              <Outlet />
-            </Layout>
+            <Outlet />
           </motion.div>
         </AnimatePresence>
       </main>
