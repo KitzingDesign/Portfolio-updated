@@ -8,7 +8,7 @@ import BachelorThesisSection from "./components/BachelorThesisSection";
 import { Helmet } from "react-helmet";
 
 // FullPage.js
-const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY || null;
+// const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY || null;
 
 // Section titles mapping
 const SECTION_TITLES = {
