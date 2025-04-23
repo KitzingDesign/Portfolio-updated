@@ -1,6 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  ScrollRestoration,
+} from "react-router-dom";
 import "./styles/global.scss";
 import App from "./App.tsx";
 
@@ -12,17 +16,11 @@ import KnowledgeSharingPage from "./pages/knowledgeSharing/KnowledgeSharing.tsx"
 import DigitalizationPage from "./pages/digitalization/Digitalization.tsx";
 import MasterThesisPage from "./pages/masterThesis/MasterThesis.tsx";
 import BachelorPage from "./pages/bachelor/BachelorPage.tsx";
-import ScrollToTop from "./ScrollToTop.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <ScrollToTop />
-        <App />
-      </>
-    ),
+    element: <App />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "/about", element: <About /> },

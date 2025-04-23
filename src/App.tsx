@@ -41,9 +41,9 @@ const App = () => {
             transition={pageTransition}
           >
             <Outlet />
+            <ScrollRestoration />
           </motion.div>
         </AnimatePresence>
-        <ScrollRestoration />
       </main>
       {matPopup && (
         <ToastModal
