@@ -22,7 +22,7 @@ export default defineConfig({
     },
   },
   build: {
-    minify: "terser",
+    minify: "esbuild",
     chunkSizeWarningLimit: 1000,
   },
 });
