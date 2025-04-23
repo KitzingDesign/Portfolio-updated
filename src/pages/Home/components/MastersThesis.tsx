@@ -8,7 +8,7 @@ interface MasterThesisSectionProps {
 }
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100dvh;
   max-width: 80vw;
   margin: 0 auto;
   display: flex;
@@ -19,11 +19,11 @@ const Container = styled.div`
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100dvh;
   }
 
   @media (orientation: portrait) and (max-width: 576px) {
-    height: 100vh;
+    height: 100dvh;
     max-height: -webkit-fill-available;
     max-width: 85vw;
     gap: var(--space-md);
@@ -42,11 +42,11 @@ const ImgContainer = styled.div`
   width: 40vw;
 
   @media (orientation: portrait) {
-    width: 65vw;
+    width: 65dvw;
   }
 
   @media (orientation: portrait) and (max-width: 34.5em) {
-    width: 80vw;
+    width: 80dvw;
   }
 `;
 
