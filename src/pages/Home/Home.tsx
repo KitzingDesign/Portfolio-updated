@@ -8,7 +8,7 @@ import BachelorThesisSection from "./components/BachelorThesisSection";
 import { Helmet } from "react-helmet";
 
 // FullPage.js
-const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY;
+const fullPageToken = import.meta.env.VITE_FULLPAGE_KEY || null;
 
 // Section titles mapping
 const SECTION_TITLES = {
@@ -40,8 +40,6 @@ const HomePage = () => {
         licenseKey={fullPageToken}
         credits={{
           enabled: false,
-          label: "",
-          position: "right",
         }}
         anchors={[
           "home",
