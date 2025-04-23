@@ -1,8 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import "./styles/global.scss";
 import App from "./App.tsx";
+import { useLayoutEffect, ReactNode } from "react";
 
 // Pages
 import HomePage from "./pages/Home/Home.tsx";
@@ -13,10 +18,28 @@ import DigitalizationPage from "./pages/digitalization/Digitalization.tsx";
 import MasterThesisPage from "./pages/masterThesis/MasterThesis.tsx";
 import BachelorPage from "./pages/bachelor/BachelorPage.tsx";
 
+interface WrapperProps {
+  children: ReactNode;
+}
+
+const Wrapper = ({ children }: WrapperProps) => {
+  const location = useLocation();
+  useLayoutEffect(() => {
+    document.documentElement.scrollTo(0, 0);
+  }, [location.pathname]);
+  return children;
+};
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <>
+        <Wrapper>
+          <App />
+        </Wrapper>
+      </>
+    ),
     children: [
       { index: true, element: <HomePage /> },
       { path: "/about", element: <About /> },
