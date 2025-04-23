@@ -19,12 +19,12 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "about", element: <About /> },
-      { path: "thesis", element: <MasterThesisPage /> },
-      { path: "knowledge", element: <KnowledgeSharingPage /> },
-      { path: "calmifly", element: <CalmiflyPage /> },
-      { path: "digitalization", element: <DigitalizationPage /> },
-      { path: "bachelorThesis", element: <BachelorPage /> },
+      { path: "/about", element: <About /> },
+      { path: "/thesis", element: <MasterThesisPage /> },
+      { path: "/knowledge", element: <KnowledgeSharingPage /> },
+      { path: "/calmifly", element: <CalmiflyPage /> },
+      { path: "/digitalization", element: <DigitalizationPage /> },
+      { path: "/bachelorThesis", element: <BachelorPage /> },
     ],
   },
 ]);
