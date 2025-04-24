@@ -14,7 +14,7 @@ import "swiper/swiper-bundle.css";
 // Image imports
 import phoneImg from "@/assets/images/digitalization/phone.png?url";
 import img3 from "@/assets/images/digitalization/KryStorJury.webp";
-import img4 from "@/assets/images/digitalization/GynoStor.jpg";
+import img4 from "@/assets/images/digitalization/GynoStor.webp";
 import img1 from "@/assets/images/digitalization/EldlerStor.jpg";
 import img2 from "@/assets/images/digitalization/ElyStor.jpg";
 import headImg from "@/assets/images/home/Startbild.svg";
