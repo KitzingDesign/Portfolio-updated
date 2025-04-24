@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import styles from "./DigiHeader.module.scss";
-// Import icons
 import {
   HeartIcon,
   ChatBubbleOvalLeftIcon as ChatIcon,
@@ -8,24 +7,17 @@ import {
   BookmarkIcon,
 } from "@heroicons/react/24/outline";
 
-import SwiperCore from "swiper";
+// Swiper v11 imports
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import "swiper/swiper-bundle.css";
 
-//CSS imports to use direct paths
-import "swiper/modules/navigation/navigation.min.css";
-import "swiper/modules/pagination/pagination.min.css";
-// import SwipeArrow from "../UI/swipe-arrow";
-
-import phoneImg from "@/assets/images/digitalization/phone.png";
+// Image imports
+import phoneImg from "@/assets/images/digitalization/phone.png?url";
 import img3 from "@/assets/images/digitalization/KryStorJury.webp";
 import img4 from "@/assets/images/digitalization/GynoStor.jpg";
 import img1 from "@/assets/images/digitalization/EldlerStor.jpg";
 import img2 from "@/assets/images/digitalization/ElyStor.jpg";
-
 import headImg from "@/assets/images/home/Startbild.svg";
-
-SwiperCore.use([Pagination, Navigation]);
 
 interface DigiHeaderProps {
   // Add any props you need here
@@ -43,12 +35,11 @@ const DigiHeader: React.FC<DigiHeaderProps> = () => {
       <div className={styles.kryImg}>
         <div>
           <div className={styles.phone}>
-            <img src={phoneImg} alt="Iphone" className={styles.phoneImage} />
+            <img src={phoneImg} alt="iPhone" className={styles.phoneImage} />
           </div>
           {domLoaded && (
             <div className={styles.swipes}>
               <Swiper
-                id="swiper-color"
                 slidesPerView={1}
                 spaceBetween={0}
                 loop={true}
@@ -85,12 +76,8 @@ const DigiHeader: React.FC<DigiHeaderProps> = () => {
                       </div>
                       <div className={styles.swiperImg}>
                         <Swiper
-                          id="swiper-color"
                           slidesPerView={1}
                           spaceBetween={0}
-                          pagination={{
-                            clickable: false,
-                          }}
                           loop={true}
                           className={styles.carousell}
                         >
