@@ -19,7 +19,7 @@ interface MasterThesisPageProps {
 const MasterThesisPage: React.FC<MasterThesisPageProps> = () => {
   return (
     <>
-      <ScrollToTop />x
+      <ScrollToTop />
       <Helmet>
         <title>Master's Thesis</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

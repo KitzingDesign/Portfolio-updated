@@ -3,6 +3,7 @@ import Footer from "../../components/Layout/Footer";
 import DigiContent from "./components/DigiContent";
 import DigiBackground from "./components/DigiBackground";
 import DigiHeader from "./components/DigiHeader";
+import ScrollToTop from "@/ScrollToTop";
 
 interface DigitalizationPageProps {
   // Add any props you need here
@@ -16,6 +17,8 @@ const DigitalizationPage: React.FC<DigitalizationPageProps> = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Digitalization project showcase" />
       </Helmet>
+      <ScrollToTop />
+
       <DigiHeader />
       <DigiBackground />
       <DigiContent />
