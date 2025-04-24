@@ -12,9 +12,10 @@ import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// Update CSS imports to use direct paths
+import "swiper/swiper-bundle.min.css";
+import "swiper/modules/navigation/navigation.min.css";
+import "swiper/modules/pagination/pagination.min.css";
 // import SwipeArrow from "../UI/swipe-arrow";
 
 import phoneImg from "@/assets/images/digitalization/phone.png";
