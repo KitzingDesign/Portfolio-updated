@@ -12,8 +12,7 @@ import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-// Update CSS imports to use direct paths
-import "swiper/swiper-bundle.min.css";
+//CSS imports to use direct paths
 import "swiper/modules/navigation/navigation.min.css";
 import "swiper/modules/pagination/pagination.min.css";
 // import SwipeArrow from "../UI/swipe-arrow";
