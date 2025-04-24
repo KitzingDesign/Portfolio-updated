@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className={styles.socials}>
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/KitzingDesign"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialLink}
@@ -20,7 +20,7 @@ const Footer = () => {
           GITHUB
         </a>
         <a
-          href="https://twitter.com/yourhandle"
+          href="https://www.matmatmaten.com/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialLink}
@@ -28,7 +28,7 @@ const Footer = () => {
           MATMATMATEN
         </a>
         <a
-          href="https://linkedin.com/in/jakob-kitzing"
+          href="https://www.linkedin.com/in/jakob-kitzing-27b4991b7/"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.socialLink}
