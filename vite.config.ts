@@ -7,6 +7,8 @@ export default defineConfig({
   plugins: [
     react(),
     ViteImageOptimizer({
+      cache: true,
+      cacheLocation: "node_modules/.cache/image-optimizer",
       jpeg: { quality: 80 }, // Lower quality = smaller files
       png: { quality: 80 },
       webp: { lossless: false }, // Lossy WebP for smaller sizes
