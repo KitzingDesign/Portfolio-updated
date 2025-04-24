@@ -7,14 +7,14 @@ const Container = styled.div`
 	}
 `;
 const Content = styled.div`
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   & > p {
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
   }
-  @media (max-width: 90em) {
+  @media (max-width: 992px) {
     width: 90vw;
   }
 `;
