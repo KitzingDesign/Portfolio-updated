@@ -28,16 +28,13 @@
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
-    margin-top: 40px;
-    padding: 120px 0;
-
-    .header {
-    }
+    margin-top: var(--space-xl);
+    padding: 80px 0;
 
     .question {
-      width: 90%;
+      width: 95%;
     }
   }
 }

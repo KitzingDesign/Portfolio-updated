@@ -47,21 +47,15 @@
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
     flex-direction: column-reverse;
-    margin-top: 80px;
-    width: 85vw;
+    margin-top: var(--space-xl);
+    width: 90vw;
   }
 
   .textContainer {
     width: 100%;
-
-    h2 {
-    }
-
-    p {
-    }
   }
 
   .video {

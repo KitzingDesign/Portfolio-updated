@@ -8,6 +8,14 @@
   margin-top: 160px;
   width: 80vw;
 
+  div {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   h2 {
     text-align: center;
     width: 100%;
@@ -30,10 +38,12 @@
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
-    margin-top: 80px;
-    width: 85vw;
+    margin-top: var(--space-xxl);
+    width: 90vw;
+    flex-direction: column-reverse;
+    gap: var(--space-md);
     h2 {
       text-align: left;
     }
@@ -42,7 +52,7 @@
       width: 100%;
     }
     .image {
-      margin-top: 16px;
+      margin-top: 0px;
       width: 100%;
     }
   }

@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 import heroImg from "@/assets/images/mastersThesis/HeroMasterThesis.png";
 
 const Container = styled.div`
-  height: 100vh;
+  height: 100dvh;
   max-width: 95vw;
   margin: 0 auto;
   position: relative;
@@ -20,6 +20,9 @@ const Container = styled.div`
 const Headings = styled.div`
   padding-bottom: 100px;
   position: relative;
+  @media (max-width: 84em) {
+    padding-bottom: 24px;
+  }
 `;
 
 const Vertical = styled.div`
@@ -114,10 +117,7 @@ const Above = styled.h2`
   animation-delay: 0.9s;
 
   @media (max-width: 84em) {
-    bottom: 100px;
-  }
-  @media (max-width: 75em) {
-    bottom: 90px;
+    bottom: 20px;
   }
 `;
 
@@ -128,6 +128,9 @@ const Img = styled.div`
     width: 100%;
     height: auto;
     object-fit: contain;
+  }
+  @media (max-width: 84em) {
+    margin-top: 40px;
   }
 `;
 

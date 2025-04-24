@@ -15,10 +15,7 @@ const Content = styled.div`
     padding-bottom: 1.6rem;
   }
   @media (max-width: 90em) {
-    width: 85vw;
-  }
-  @media (max-width: 25em) {
-    width: 80vw;
+    width: 90vw;
   }
 `;
 const BackgroundTitle = styled.h2`
@@ -35,7 +32,7 @@ const BackgroundTitle = styled.h2`
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 4px;
   width: 100%;
 `;
 
