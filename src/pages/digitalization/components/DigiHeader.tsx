@@ -9,7 +9,7 @@ import {
 
 // Swiper v11 imports
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+// import "swiper/swiper-bundle.css";
 
 // Image imports
 import phoneImg from "@/assets/images/digitalization/phone.png?url";
