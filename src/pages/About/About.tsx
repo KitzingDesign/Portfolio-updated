@@ -5,6 +5,7 @@ import WorkExperience from "./components/WorkExperience";
 import HeroImg from "@/assets/images/about/aboutImg.jpg";
 import Footer from "../../components/Layout/Footer";
 import Contacts from "./components/Contacts";
+import ScrollToTop from "@/ScrollToTop";
 
 const AboutPage = () => {
   const containerRef = useRef(null);
@@ -137,113 +138,116 @@ const AboutPage = () => {
   }, [isInView]);
 
   return (
-    <div className={styles.outerContainer}>
-      <div className={styles.container} ref={containerRef}>
-        <div className={styles.textContainer}>
-          {/* Section 1 */}
-          <div className={styles.textSection}>
-            <motion.div
-              className={styles.coverBox}
-              initial={{ width: "var(--initial-width-1)" }}
-              animate={firstCoverControls}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            />
-            <h3>Who am I?</h3>
+    <>
+      <ScrollToTop />
+      <div className={styles.outerContainer}>
+        <div className={styles.container} ref={containerRef}>
+          <div className={styles.textContainer}>
+            {/* Section 1 */}
+            <div className={styles.textSection}>
+              <motion.div
+                className={styles.coverBox}
+                initial={{ width: "var(--initial-width-1)" }}
+                animate={firstCoverControls}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              />
+              <h3>Who am I?</h3>
 
-            <motion.div
-              animate={firstContentControls}
-              initial={{ opacity: 0, height: 0 }}
-              className={styles.contentWrapper}
-            >
-              <p>
-                My name is Jakob, and I'm a UX/UI designer, Frontend Developer,
-                human researcher, product developer, and music lover; everything
-                from electronic music to jazz resonates through my headphones.
-                As a person, I'm outgoing and caring about my surroundings,
-                believing that everything is more enjoyable when those around me
-                are happy. My philosophy is that having fun reflects on the
-                results.
-              </p>
-            </motion.div>
+              <motion.div
+                animate={firstContentControls}
+                initial={{ opacity: 0, height: 0 }}
+                className={styles.contentWrapper}
+              >
+                <p>
+                  My name is Jakob, and I'm a UX/UI designer, Frontend
+                  Developer, human researcher, product developer, and music
+                  lover; everything from electronic music to jazz resonates
+                  through my headphones. As a person, I'm outgoing and caring
+                  about my surroundings, believing that everything is more
+                  enjoyable when those around me are happy. My philosophy is
+                  that having fun reflects on the results.
+                </p>
+              </motion.div>
+            </div>
+
+            {/* Section 2 */}
+            <div className={styles.textSection}>
+              <motion.div
+                className={styles.coverBox}
+                initial={{ width: "var(--initial-width-2)" }}
+                animate={secondCoverControls}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              />
+              <h3>Selected Work Experience</h3>
+
+              <motion.div
+                animate={secondContentControls}
+                initial={{ opacity: 0, height: 0 }}
+                className={styles.contentWrapper}
+              >
+                <WorkExperience
+                  company="Master's Thesis - Kognic"
+                  time="Jan 2024 - Jun 2024"
+                />
+                <WorkExperience
+                  company="UX Designer - Kognic"
+                  time="Jun 2023 - Jul 2023"
+                />
+                <WorkExperience
+                  company="Photoshop Instructor - Chalmers University of Technology"
+                  time="Aug 2019 & Aug 2020"
+                />
+                <WorkExperience
+                  company="Driver - Västra Götalandsregionen"
+                  time="2019 - 2022"
+                />
+              </motion.div>
+            </div>
+
+            {/* Section 3 */}
+            <div className={styles.textSection}>
+              <motion.div
+                className={styles.coverBox}
+                initial={{ width: "var(--initial-width-3)" }}
+                animate={thirdCoverControls}
+                transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              />
+              <h3>Education</h3>
+
+              <motion.div
+                animate={thirdContentControls}
+                initial={{ opacity: 0, height: 0 }}
+                className={styles.contentWrapper}
+              >
+                <WorkExperience
+                  company="M.Sc. Interaction Design and Technologies - Chalmers University of Technology"
+                  time="Aug 2022 - Jun 2024"
+                />
+                <WorkExperience
+                  company="Exchange Studies, Computer Science - Instituto Superior Técnico, Lisbon"
+                  time="Aug 2023 - Jan 2024"
+                />
+                <WorkExperience
+                  company="B.Sc. Industrial Design Engineering - Chalmers University of Technology"
+                  time="Aug 2018 - Jun 2021"
+                />
+              </motion.div>
+            </div>
           </div>
 
-          {/* Section 2 */}
-          <div className={styles.textSection}>
-            <motion.div
-              className={styles.coverBox}
-              initial={{ width: "var(--initial-width-2)" }}
-              animate={secondCoverControls}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          <div className={styles.imgContainer}>
+            <img
+              src={HeroImg}
+              alt="Action figure of Jakob Kitzing in collectible packaging"
+              loading="lazy"
             />
-            <h3>Selected Work Experience</h3>
-
-            <motion.div
-              animate={secondContentControls}
-              initial={{ opacity: 0, height: 0 }}
-              className={styles.contentWrapper}
-            >
-              <WorkExperience
-                company="Master's Thesis - Kognic"
-                time="Jan 2024 - Jun 2024"
-              />
-              <WorkExperience
-                company="UX Designer - Kognic"
-                time="Jun 2023 - Jul 2023"
-              />
-              <WorkExperience
-                company="Photoshop Instructor - Chalmers University of Technology"
-                time="Aug 2019 & Aug 2020"
-              />
-              <WorkExperience
-                company="Driver - Västra Götalandsregionen"
-                time="2019 - 2022"
-              />
-            </motion.div>
-          </div>
-
-          {/* Section 3 */}
-          <div className={styles.textSection}>
-            <motion.div
-              className={styles.coverBox}
-              initial={{ width: "var(--initial-width-3)" }}
-              animate={thirdCoverControls}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            />
-            <h3>Education</h3>
-
-            <motion.div
-              animate={thirdContentControls}
-              initial={{ opacity: 0, height: 0 }}
-              className={styles.contentWrapper}
-            >
-              <WorkExperience
-                company="M.Sc. Interaction Design and Technologies - Chalmers University of Technology"
-                time="Aug 2022 - Jun 2024"
-              />
-              <WorkExperience
-                company="Exchange Studies, Computer Science - Instituto Superior Técnico, Lisbon"
-                time="Aug 2023 - Jan 2024"
-              />
-              <WorkExperience
-                company="B.Sc. Industrial Design Engineering - Chalmers University of Technology"
-                time="Aug 2018 - Jun 2021"
-              />
-            </motion.div>
           </div>
         </div>
+        <Contacts />
 
-        <div className={styles.imgContainer}>
-          <img
-            src={HeroImg}
-            alt="Action figure of Jakob Kitzing in collectible packaging"
-            loading="lazy"
-          />
-        </div>
+        <Footer />
       </div>
-      <Contacts />
-
-      <Footer />
-    </div>
+    </>
   );
 };
 
