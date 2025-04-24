@@ -17,18 +17,12 @@ const Content = styled.div`
 
   @media (max-width: 1200px) {
     width: 90vw;
-    padding-top: var(--space-xxl);
+    padding-top: var(--space-xl);
   }
 
   @media (max-width: 576px) {
-    width: 85vw;
-    padding-top: var(--space-xxl);
-    & > h2 {
-      font-size: var(--font-size-xxl);
-    }
-    & > p {
-      font-size: var(--font-size-base);
-    }
+    width: 90vw;
+    padding-top: var(--space-xl);
   }
 `;
 

@@ -21,6 +21,9 @@ const Container = styled.div`
 const Headings = styled.div`
   padding-bottom: 100px;
   position: relative;
+  @media (max-width: 84em) {
+    padding-bottom: 24px;
+  }
 `;
 
 const Vertical = styled.div`
@@ -114,11 +117,8 @@ const Above = styled.h2`
   animation-fill-mode: forwards;
   animation-delay: 0.9s;
 
-  @media (max-width: 84em) {
-    bottom: 100px;
-  }
   @media (max-width: 75em) {
-    bottom: 90px;
+    bottom: 20px;
   }
 `;
 

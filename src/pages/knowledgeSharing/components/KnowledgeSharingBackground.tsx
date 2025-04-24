@@ -15,8 +15,8 @@ const Content = styled.div`
     padding-bottom: var(--space-xl);
   }
 
-  @media (max-width: 576px) {
-    width: 85vw;
+  @media (max-width: 992px) {
+    width: 90vw;
   }
 `;
 

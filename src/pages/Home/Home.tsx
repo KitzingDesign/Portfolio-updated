@@ -40,14 +40,7 @@ const HomePage = () => {
         credits={{
           enabled: false,
         }}
-        anchors={[
-          "home",
-          "thesis",
-          "knowledge",
-          "calmifly",
-          "digitalization",
-          "bachelorThesis",
-        ]}
+        anchors={["home", "thesis", "knowledge", "calmifly", "digitalization"]}
         onLeave={handleSectionLeave}
         render={() => {
           return (
@@ -66,9 +59,6 @@ const HomePage = () => {
               </div>
               <div className="section">
                 <DigitalizationSection />
-              </div>
-              <div className="section">
-                <BachelorThesisSection />
               </div>
             </ReactFullpage.Wrapper>
           );

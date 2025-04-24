@@ -32,9 +32,9 @@
 }
 
 // Media queries
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
-    width: 85vw;
+    width: 90vw;
   }
   .imgContainer {
     margin-top: var(--space-md);

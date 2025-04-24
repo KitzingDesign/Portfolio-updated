@@ -1,10 +1,9 @@
 .container {
-  padding-top: 12.8rem;
+  padding-top: var(--space-xxl);
   width: 70vw;
   margin: 0 auto;
 
   .titel {
-    font-size: 4.4rem;
     margin-bottom: 0.8rem;
   }
 
@@ -23,11 +22,11 @@
 
 @media (max-width: 59em) {
   .container {
-    width: 70vw;
-    padding-top: 24px;
+    width: 90vw;
+    padding-top: var(--space-xl);
 
     .text {
-      padding: 24px 0rem 24px 0rem;
+      padding: var(--space-sm) 0;
     }
   }
 }

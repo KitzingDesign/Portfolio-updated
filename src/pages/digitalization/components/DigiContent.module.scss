@@ -19,19 +19,12 @@
   margin: 0 auto;
 
   h2 {
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-semi-bold);
     margin-bottom: var(--space-sm);
   }
 
   @media screen and (max-width: 1200px) {
     width: 90vw;
     margin-top: 2.4rem;
-
-    h2 {
-      font-size: var(--font-size-xxl);
-      margin-bottom: var(--space-xxl);
-    }
   }
 }
 

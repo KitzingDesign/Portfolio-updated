@@ -22,24 +22,10 @@ interface WrapperProps {
   children: ReactNode;
 }
 
-const Wrapper = ({ children }: WrapperProps) => {
-  const location = useLocation();
-  useLayoutEffect(() => {
-    document.documentElement.scrollTo(0, 0);
-  }, [location.pathname]);
-  return children;
-};
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <>
-        <Wrapper>
-          <App />
-        </Wrapper>
-      </>
-    ),
+    element: <App />,
     children: [
       { index: true, element: <HomePage /> },
       { path: "/about", element: <About /> },
@@ -47,7 +33,6 @@ const router = createBrowserRouter([
       { path: "/knowledge", element: <KnowledgeSharingPage /> },
       { path: "/calmifly", element: <CalmiflyPage /> },
       { path: "/digitalization", element: <DigitalizationPage /> },
-      { path: "/bachelorThesis", element: <BachelorPage /> },
     ],
   },
 ]);

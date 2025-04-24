@@ -1,43 +1,6 @@
+// Main container styles
 .upperContainer {
   position: relative;
-}
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-}
-
-.whiteSide {
-  width: 50%;
-  background-color: white;
-}
-
-.orangeSide {
-  width: 50%;
-  background-color: #e38547;
-}
-
-.textContainer {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-
-  h2 {
-    font-size: 30vw;
-  }
-}
-
-.W {
-  color: black;
-}
-
-.O {
-  color: white;
 }
 
 .kryImg {
@@ -56,7 +19,7 @@
   overflow: hidden;
   pointer-events: none;
 
-  .phoneImage {
+  &Image {
     width: 100%;
     height: auto;
   }
@@ -67,7 +30,7 @@
   position: absolute;
   z-index: 1;
   border-radius: 2.6vw;
-  height: 41.7vw;
+  height: 42.1vw;
   width: 22vw;
   overflow: hidden;
   cursor: pointer;
@@ -81,7 +44,7 @@
   width: 22vw;
 }
 
-/* First slide */
+// First slide styles
 .firstSlide {
   position: relative;
   display: flex;
@@ -89,20 +52,17 @@
   height: 100%;
 }
 
-.wCircle {
-  transform: translate(0%, 100%);
-  width: 30%;
-  padding-top: 60%;
+.whiteSide {
+  width: 50%;
   background-color: white;
-  border-bottom-right-radius: 200px;
-  border-top-right-radius: 200px;
+  position: relative;
 }
 
-.oCircle {
+.orangeCicle {
   transform: translate(0%, 100%);
   float: right;
   width: 30%;
-  padding-top: 60%;
+  padding-top: 60%; // 1:1 Aspect Ratio
   background-color: #e38547;
   border-bottom-left-radius: 200px;
   border-top-left-radius: 200px;
@@ -114,10 +74,22 @@
   top: 50%;
   transform: scaleX(-1);
   width: 30%;
+  fill: #e38547;
+}
 
-  svg {
-    fill: #e38547;
-  }
+.orangeSide {
+  width: 50%;
+  background-color: #e38547;
+  position: relative;
+}
+
+.whiteCicle {
+  transform: translate(0%, 100%);
+  width: 30%;
+  padding-top: 60%;
+  background-color: white;
+  border-bottom-right-radius: 200px;
+  border-top-right-radius: 200px;
 }
 
 .rightArrow {
@@ -125,13 +97,10 @@
   left: 50%;
   top: 50%;
   width: 30%;
-
-  svg {
-    fill: white;
-  }
+  fill: white;
 }
 
-/* Second slide */
+// Second slide styles
 .secondSlide {
   width: 100%;
   height: 100%;
@@ -140,23 +109,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.swiperImg {
-  height: 35%;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.imgContainer {
-  position: absolute;
-  width: 100%;
-
-  .contentImage {
-    width: 100%;
-    height: auto;
-  }
 }
 
 .profileInfo {
@@ -171,6 +123,13 @@
     line-height: 1.1;
     font-size: 1rem;
   }
+
+  @media (max-width: 32em) {
+    p {
+      line-height: 1.1;
+      font-size: 5px;
+    }
+  }
 }
 
 .profileImg {
@@ -178,16 +137,33 @@
   width: 4rem;
   padding-bottom: 2.4rem;
 
-  .profileImage {
+  img {
     width: 100%;
     height: auto;
   }
+
+  @media (max-width: 32em) {
+    height: 12px;
+    width: 12px;
+    padding-bottom: 15px;
+  }
 }
 
-.likesText {
-  line-height: 1.1;
-  width: 80%;
-  font-size: 0.8rem;
+.swiperImg {
+  height: 35%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.imgContainer {
+  position: absolute;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .iconer {
@@ -197,45 +173,80 @@
   width: 90%;
   margin-top: 0.8rem;
   padding-bottom: 1.2rem;
-}
 
-.icon {
-  height: 2.4rem;
-}
-
-/* Responsive styles */
-@media (max-width: 44em) {
-  .icon {
-    height: 12px;
-  }
-}
-
-@media (max-width: 32em) {
-  .icon {
-    height: 10px;
-  }
-
-  .iconer {
+  @media (max-width: 32em) {
     margin-top: 3px;
     padding-bottom: 0;
   }
+}
 
-  .likesText {
+// Icon styles
+.heartImg,
+.chatImg,
+.planeImg,
+.bookMarkImg {
+  height: 2.4rem;
+
+  @media (max-width: 44em) {
+    height: 12px;
+  }
+
+  @media (max-width: 32em) {
+    height: 10px;
+  }
+}
+
+.textLikes {
+  line-height: 1.1;
+  width: 90%;
+  font-size: 0.8rem;
+
+  @media (max-width: 32em) {
     line-height: 1.1;
     width: 90%;
     font-size: 5px;
   }
+}
 
-  .profileInfo {
-    p {
-      line-height: 1.1;
-      font-size: 5px;
-    }
-  }
+.textContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
 
-  .profileImg {
-    height: 12px;
-    width: 12px;
-    padding-bottom: 15px;
+  h2 {
+    font-size: 30vw;
   }
+}
+
+.textLeft {
+  color: black;
+}
+
+.textRight {
+  color: white;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.whiteBackground {
+  width: 50%;
+  background-color: white;
+}
+
+.orangeBackground {
+  width: 50%;
+  background-color: #e38547;
+}
+
+.carousell {
+  width: 100%;
+  height: 100%;
 }

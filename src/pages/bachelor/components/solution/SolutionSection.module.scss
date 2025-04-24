@@ -30,7 +30,6 @@
   width: 100%;
 
   h3 {
-    font-size: 2.4rem;
     margin-bottom: 1.4rem;
   }
 }
@@ -42,7 +41,6 @@
 .smutsAbove {
   width: 50%;
   position: relative;
-  border-left: white solid 0.3rem;
   display: flex;
   align-items: center;
 
@@ -62,54 +60,27 @@
   div {
     margin-left: 2.4rem;
   }
-
-  &::after {
-    display: block;
-    content: "";
-    width: 4.6rem;
-    height: 4.6rem;
-    position: absolute;
-    top: 0rem;
-    right: -2.9rem;
-    border-top: 0.3rem solid white;
-    border-right: 0.3rem solid white;
-  }
-
-  &::before {
-    display: block;
-    content: "";
-    width: 4.6rem;
-    height: 4.6rem;
-    position: absolute;
-    bottom: 0rem;
-    left: -2.9rem;
-    border-bottom: 0.3rem solid white;
-    border-left: 0.3rem solid white;
-  }
 }
 
-@media (max-width: 44em) {
+@media (max-width: 992px) {
+  .flex {
+    flex-direction: column;
+  }
+  .imgContainer {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+  .smutsAbove {
+    width: 100%;
+  }
   .textContainer {
     margin-top: 48px;
   }
 
-  .smutsAbove p,
-  .smutsAvg p {
-    font-size: 1.8rem !important;
-  }
-
   .smutsAvg div {
     margin-left: 8px;
-  }
-}
-
-@media (max-width: 31.5em) {
-  .smutsAbove p,
-  .smutsAvg p {
-    font-size: 1.2rem !important;
-  }
-
-  .smutsAvg div {
-    margin-left: 0px;
   }
 }
