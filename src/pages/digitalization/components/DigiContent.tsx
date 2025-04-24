@@ -6,7 +6,7 @@ import styles from "./DigiContent.module.scss";
 import FirstImage from "@/assets/images/digitalization/EldlerStorLogo.webp";
 import SecondImage from "@/assets/images/digitalization/ElyStorLogo.webp";
 import ThirdImage from "@/assets/images/digitalization/JuryArm.png";
-import FourthImage from "@/assets/images/digitalization/GynoStor.jpg";
+import FourthImage from "@/assets/images/digitalization/GynoStor.webp";
 import FifthImage from "@/assets/images/digitalization/BoiStorGIF.gif";
 
 const DigiContent = () => {
