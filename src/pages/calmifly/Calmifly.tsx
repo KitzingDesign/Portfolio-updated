@@ -3,7 +3,6 @@ import CalmiflyHeader from "./components/CalmiflyHeader";
 import CalmiflyBakgrund from "./components/CalmiflyBackground";
 import CalmiflyContent from "./components/CalmiflyContent";
 import Footer from "../../components/Layout/Footer";
-import { ScrollRestoration } from "react-router-dom";
 
 const CalmiflyPage = () => {
   return (
@@ -13,7 +12,6 @@ const CalmiflyPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Digitalization project showcase" />
       </Helmet>
-      <ScrollRestoration />
 
       <CalmiflyHeader />
       <CalmiflyBakgrund />

@@ -41,7 +41,6 @@ const App = () => {
             transition={pageTransition}
           >
             <Outlet />
-            <ScrollRestoration />
           </motion.div>
         </AnimatePresence>
       </main>
@@ -53,6 +52,7 @@ const App = () => {
           onClose={closePopup}
         />
       )}
+      <ScrollRestoration />
     </>
   );
 };
