@@ -1,10 +1,11 @@
-import { Outlet, useLocation, ScrollRestoration } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import "@/styles/global.scss";
 import NavBar from "./components/Layout/NavBar";
 import ToastModal from "./components/Layout/ToastModal";
+import ScrollToTop from "./ScrollToTop";
 
 const pageVariants = {
   initial: {
@@ -31,6 +32,7 @@ const App = () => {
   return (
     <>
       <NavBar />
+      <ScrollToTop />
       <main>
         <AnimatePresence mode="wait" initial={false}>
           <motion.div
@@ -52,7 +54,6 @@ const App = () => {
           onClose={closePopup}
         />
       )}
-      <ScrollRestoration />
     </>
   );
 };
