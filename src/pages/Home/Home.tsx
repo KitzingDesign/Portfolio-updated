@@ -4,7 +4,6 @@ import MasterThesisSection from "./components/MastersThesis";
 import KnowledgeSection from "./components/KowledgeSection";
 import EmotionSection from "./components/EmotionSection";
 import DigitalizationSection from "./components/DigitalizationSection";
-import BachelorThesisSection from "./components/BachelorThesisSection";
 import { Helmet } from "react-helmet";
 
 // FullPage.js
