@@ -1,7 +1,7 @@
 import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
 import { CSSProperties } from "react";
-import headerImg from "@/assets/images/knowledgeSharing/KnowledgeHeader.webp"; // Adjust the path as necessary
+import headerImg from "@/assets/images/knowledgeSharing/KnowledgeHeaderMockup.png";
 
 // Styled components
 const Container = styled.div`

@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import conceptImg from "@/assets/images/home/KnowledgeSharingMockup.webp"; // Adjust path as needed
+import conceptImg from "@/assets/images/home/KnowledgeSharingMockup.png"; // Adjust path as needed
 import StyledLink from "@/components/ui/Link";
 
 interface KnowledgeSectionProps {
