@@ -39,17 +39,13 @@
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
-    padding: 40px 0;
-
-    .header {
-      font-size: 32px;
-    }
+    padding: var(--space-xl) 0;
 
     .divider {
       width: 90%;
-      margin-bottom: 48px;
+      margin-bottom: var(--space-xl);
     }
 
     .part {

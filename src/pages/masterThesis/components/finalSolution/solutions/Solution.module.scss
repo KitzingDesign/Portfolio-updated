@@ -13,13 +13,11 @@
 
     h2 {
       color: #fff;
-      font-size: 64px;
       font-weight: 600;
       margin-bottom: 16px;
     }
 
     p {
-      font-size: 20px;
       color: #fff;
     }
   }
@@ -47,29 +45,23 @@
 @media (max-width: 90em) {
   .container,
   .containerLeft {
-    .textColumn {
-      h2 {
-        font-size: 40px;
-      }
-
-      p {
-        font-size: 20px;
-      }
-    }
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
     flex-direction: column-reverse;
-    gap: 16px;
-    padding: 20px;
+    gap: var(--space-md);
+    padding: 8px;
+  }
+
+  .containerLeft {
+    padding: 8px;
+    gap: var(--space-md);
   }
 
   .containerLeft {
     flex-direction: column;
-    gap: 16px;
-    padding: 20px;
   }
 
   .container,
@@ -77,15 +69,6 @@
     .textColumn {
       width: 100%;
       padding: 0;
-
-      h2 {
-        font-size: 32px;
-        text-align: center;
-      }
-
-      p {
-        font-size: 16px;
-      }
     }
 
     .videoColumn {

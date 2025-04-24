@@ -4,13 +4,11 @@
   width: 80%;
 
   p {
-    font-size: 20px;
     text-align: left;
   }
 }
 
 .header {
-  font-size: 56px;
   font-weight: 600;
   margin-bottom: 20px;
   text-align: left;
@@ -64,14 +62,6 @@
     width: 85%;
   }
 
-  .header {
-    font-size: 48px;
-  }
-
-  .container p {
-    font-size: 16px;
-  }
-
   .guidelinesContainer {
     width: 85%;
   }
@@ -87,18 +77,11 @@
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 992px) {
   .container {
-    width: 95%;
+    width: 100%;
     padding-top: 0;
-  }
-
-  .header {
-    font-size: 32px;
-  }
-
-  .container p {
-    font-size: 16px;
+    margin-top: var(--space-xxl);
   }
 
   .guidelinesContainer {
