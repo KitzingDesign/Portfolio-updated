@@ -1,22 +1,4 @@
-// SplideJS
 declare module "@splidejs/react-splide" {
-  import { ComponentType, CSSProperties, ReactNode } from "react";
-
-  export interface SplideProps {
-    options?: Record<string, any>;
-    children?: ReactNode;
-    className?: string;
-    style?: CSSProperties;
-    tag?: keyof JSX.IntrinsicElements;
-  }
-
-  export interface SplideSlideProps {
-    children?: ReactNode;
-    className?: string;
-    style?: CSSProperties;
-  }
-
-  export const Splide: ComponentType<SplideProps>;
-  export const SplideSlide: ComponentType<SplideSlideProps>;
-  export const SplideTrack: ComponentType<{ children: ReactNode }>;
+  import { Splide, SplideSlide } from "@splidejs/react-splide/dist/types/index";
+  export { Splide, SplideSlide };
 }
