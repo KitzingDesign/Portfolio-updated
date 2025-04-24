@@ -1,56 +1,38 @@
-// declarations.d.ts
-declare module "*.module.css" {
-  const classes: { readonly [key: string]: string };
-  export default classes;
-}
-
-declare module "*.module.scss" {
-  const classes: { readonly [key: string]: string };
-  export default classes;
-}
-
-// declarations.d.ts
+// SplideJS
 declare module "@splidejs/react-splide" {
-  import { ComponentType } from "react";
+  import { ComponentType, CSSProperties, ReactNode } from "react";
 
   export interface SplideProps {
-    // Add any Splide props you use
-    options?: any;
-    children?: React.ReactNode;
+    options?: Record<string, any>;
+    children?: ReactNode;
+    className?: string;
+    style?: CSSProperties;
+    tag?: keyof JSX.IntrinsicElements;
   }
 
   export interface SplideSlideProps {
-    // Add any SplideSlide props you use
-    children?: React.ReactNode;
+    children?: ReactNode;
+    className?: string;
+    style?: CSSProperties;
   }
 
   export const Splide: ComponentType<SplideProps>;
   export const SplideSlide: ComponentType<SplideSlideProps>;
+  export const SplideTrack: ComponentType<{ children: ReactNode }>;
 }
 
-// Add these for CSS/SCSS module support
-declare module "*.css" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.scss" {
-  const content: string;
-  export default content;
-}
-
-// For Swiper CSS imports
+// Swiper CSS
 declare module "swiper/css" {
-  const content: string;
-  export default content;
+  const css: string;
+  export default css;
 }
 
 declare module "swiper/css/navigation" {
-  const content: string;
-  export default content;
+  const css: string;
+  export default css;
 }
 
 declare module "swiper/css/pagination" {
-  const content: string;
-  export default content;
+  const css: string;
+  export default css;
 }
