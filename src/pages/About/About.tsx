@@ -186,6 +186,14 @@ const AboutPage = () => {
                 className={styles.contentWrapper}
               >
                 <WorkExperience
+                  company="UX Designer - Ericsson"
+                  time="Jun 2025 - "
+                />
+                <WorkExperience
+                  company="UX Design Intern - SystemWeaver"
+                  time="Maj 2025 - Jun 2025"
+                />
+                <WorkExperience
                   company="Master's Thesis - Kognic"
                   time="Jan 2024 - Jun 2024"
                 />
@@ -196,10 +204,6 @@ const AboutPage = () => {
                 <WorkExperience
                   company="Photoshop Instructor - Chalmers University of Technology"
                   time="Aug 2019 & Aug 2020"
-                />
-                <WorkExperience
-                  company="Driver - Västra Götalandsregionen"
-                  time="2019 - 2022"
                 />
               </motion.div>
             </div>
@@ -236,11 +240,7 @@ const AboutPage = () => {
           </div>
 
           <div className={styles.imgContainer}>
-            <img
-              src={HeroImg}
-              alt="Action figure of Jakob Kitzing in collectible packaging"
-              loading="lazy"
-            />
+            <img src={HeroImg} alt="Picture of Jakob" loading="lazy" />
           </div>
         </div>
         <Contacts />
