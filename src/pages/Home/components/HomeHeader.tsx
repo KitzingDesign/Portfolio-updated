@@ -71,7 +71,9 @@ const HomeHeader = () => {
           <p>
             I'm a UX Designer with roots in product development. My philosophy,
             and what I am truly passionate about, is developing creative
-            products and services where the user is at the center.
+            products and services where the user is at the center, leveraging AI
+            to move faster, prototype smarter, and tackle complex challenges
+            from first insight to final interface.
           </p>
           <StyledLink to="/about">More about me</StyledLink>
         </HeaderText>
