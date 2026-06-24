@@ -11,6 +11,7 @@ import CalmiflyPage from "./pages/calmifly/Calmifly.tsx";
 import KnowledgeSharingPage from "./pages/knowledgeSharing/KnowledgeSharing.tsx";
 import DigitalizationPage from "./pages/digitalization/Digitalization.tsx";
 import MasterThesisPage from "./pages/masterThesis/MasterThesis.tsx";
+import EricssonPage from "./pages/ericsson/Ericsson.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "/about", element: <About /> },
+      { path: "/ericsson", element: <EricssonPage /> },
       { path: "/thesis", element: <MasterThesisPage /> },
       { path: "/knowledge", element: <KnowledgeSharingPage /> },
       { path: "/calmifly", element: <CalmiflyPage /> },
@@ -30,5 +32,5 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

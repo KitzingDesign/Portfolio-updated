@@ -1,6 +1,7 @@
 import HomeHeader from "./components/HomeHeader";
 import ReactFullpage from "@fullpage/react-fullpage";
 import MasterThesisSection from "./components/MastersThesis";
+import EricssonSection from "./components/EricssonSection";
 import KnowledgeSection from "./components/KowledgeSection";
 import EmotionSection from "./components/EmotionSection";
 import DigitalizationSection from "./components/DigitalizationSection";
@@ -12,6 +13,7 @@ import { Helmet } from "react-helmet";
 // Section titles mapping
 const SECTION_TITLES = {
   home: "Home",
+  ericsson: "Ericsson – Private 5G Platform",
   thesis: "Master's Thesis",
   knowledge: "Knowledge Platform",
   calmifly: "Emotion Design",
@@ -39,13 +41,23 @@ const HomePage = () => {
         credits={{
           enabled: false,
         }}
-        anchors={["home", "thesis", "knowledge", "calmifly", "digitalization"]}
+        anchors={[
+          "home",
+          "ericsson",
+          "thesis",
+          "knowledge",
+          "calmifly",
+          "digitalization",
+        ]}
         onLeave={handleSectionLeave}
         render={() => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
                 <HomeHeader />
+              </div>
+              <div className="section">
+                <EricssonSection />
               </div>
               <div className="section">
                 <MasterThesisSection />
