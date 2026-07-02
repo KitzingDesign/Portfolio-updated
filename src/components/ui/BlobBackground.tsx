@@ -12,7 +12,6 @@ interface BlobBackgroundProps {
   className?: string;
 }
 
-// Animation keyframes outside component to prevent recreation on every render
 const movementAnimation = keyframes`
   0%, 100% {
     border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
@@ -31,7 +30,6 @@ const movementAnimation = keyframes`
   }
 `;
 
-// Styled components outside the component to prevent recreation on every render
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -94,8 +92,7 @@ const BlobBackground: React.FC<BlobBackgroundProps> = ({
           loading="lazy"
         />
       </ProfileImg>
-
-      <ShapeBlob blobColor={blobColor} blobOpacity={blobOpacity}></ShapeBlob>
+      <ShapeBlob blobColor={blobColor} blobOpacity={blobOpacity} />
     </Container>
   );
 };
