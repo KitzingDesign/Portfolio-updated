@@ -141,12 +141,12 @@ function Band({
   lanyardImage = null,
   lanyardWidth = 1,
 }: BandProps) {
-  const band = useRef<any>();
-  const fixed = useRef<any>();
-  const j1 = useRef<any>();
-  const j2 = useRef<any>();
-  const j3 = useRef<any>();
-  const card = useRef<any>();
+  const band = useRef<any>(null);
+  const fixed = useRef<any>(null);
+  const j1 = useRef<any>(null);
+  const j2 = useRef<any>(null);
+  const j3 = useRef<any>(null);
+  const card = useRef<any>(null);
 
   const vec = new THREE.Vector3();
   const ang = new THREE.Vector3();
@@ -162,9 +162,9 @@ function Band({
   };
 
   const { nodes, materials } = useGLTF(cardGLB as string) as any;
-  const frontTex = useTexture(frontImage || BLANK_PIXEL);
+  const frontTex = useTexture(frontImage || BLANK_PIXEL) as any;
 
-  const rawLanyardTex = useTexture(lanyardImage || lanyardPNG);
+  const rawLanyardTex = useTexture(lanyardImage || lanyardPNG) as any;
 
   const texture = useMemo(() => {
     if (!lanyardImage || !rawLanyardTex.image) return rawLanyardTex;
@@ -194,7 +194,7 @@ function Band({
     tex.needsUpdate = true;
     return tex;
   }, [lanyardImage, rawLanyardTex]);
-  const backTex = useTexture(backImage || BLANK_PIXEL);
+  const backTex = useTexture(backImage || BLANK_PIXEL) as any;
 
   const cardMap = useMemo(() => {
     const baseMap = materials.base.map;
@@ -316,7 +316,7 @@ function Band({
   });
 
   curve.curveType = "chordal";
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  (texture as any).wrapS = (texture as any).wrapT = THREE.RepeatWrapping;
 
   return (
     <>
@@ -344,11 +344,11 @@ function Band({
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={(e) => (
-              e.target.releasePointerCapture(e.pointerId),
+              (e.target as Element).releasePointerCapture(e.pointerId),
               drag(false)
             )}
             onPointerDown={(e) => (
-              e.target.setPointerCapture(e.pointerId),
+              (e.target as Element).setPointerCapture(e.pointerId),
               drag(
                 new THREE.Vector3()
                   .copy(e.point)
@@ -380,7 +380,9 @@ function Band({
         </RigidBody>
       </group>
       <mesh ref={band}>
+        {/* @ts-ignore */}
         <meshLineGeometry />
+        {/* @ts-ignore */}
         <meshLineMaterial
           color="white"
           depthTest={false}
